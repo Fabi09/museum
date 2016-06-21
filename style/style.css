@@ -1,0 +1,105 @@
+body {
+	background: rgb(130,185,160);
+}
+header {
+	background-color: #fff;
+	background-size:cover;
+	height: 170px;
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	border-bottom: 5px;
+	margin-bottom:5px;
+	
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+/*flags*/
+#flag {
+	margin-right: 10px;
+	float:right;
+	padding:5px;
+}
+
+/* Popup-Menu */
+nav {
+	padding:0px;
+}
+
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+
+
+nav ul {
+	background: #333;
+	padding: 0px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+		overflow: hidden;
+	}
+
+	nav ul li {
+		background: #333;
+		float: left;
+		border-right: 1px solid #bbb;
+		z-index: 1;
+	}
+		nav ul li:hover {
+			background: #000;
+		}
+		
+		nav ul li a {
+			display: block; padding: 5px 15px;
+			color: white; text-decoration: none;
+		}
+/*			nav ul li:hover a {
+				color: #A51E37;
+			}
+*/	
+	nav ul ul {
+		background: #333; padding: 0;
+		position: absolute; top: 100%;
+	}
+		nav ul ul li {
+			float: none; 
+			border-top: 1px solid #bbb;
+			border-bottom: 1px solid rgb(130,185,160); position: relative;
+		}
+			nav ul ul li a {
+				padding: 5px 11px;
+				color: white;
+			}	
+				nav ul ul li a:hover {
+					background: #000;
+				}
+		
+	nav ul ul ul {
+		background: #333;
+		position: absolute; left: 100%; top:0;
+	}
+	nav ul ul ul li a{
+		float: none; 
+		border-top: 1px solid #bbb;
+			border-bottom: 1px solid rgb(130,185,160); position: relative;
+	}

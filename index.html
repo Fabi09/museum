@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+    	<title>Layout</title>
+  
+    	<meta charset="ISO-8859-1"/>
+    	<link rel="stylesheet" type="text/css" href="style/style.css" />
+    	<link rel="stylesheet" type="text/css" href="style/slider.css" />
+  	</head>
+  	<body>
+  		<noscript>
+	      <h1>In Ihrem Browser ist JavaScript deaktiviert.</h1>
+	      <p>Im SELFHTML-Wiki erfahren Sie, 
+	        <a href="https://wiki.selfhtml.org/wiki/JavaScript/Tutorials/JavaScript_aktivieren">
+	          wie Sie JavaScript in Ihrem Browser aktivieren können.
+	        </a>
+	      </p>
+	    </noscript>
+	    <header>
+	    	<a href="http://www.uni-tuebingen.de"><img src="images/logo-uni-tuebingen.png" align="top" style="padding: 10px" /></a>
+	    	<div id="flag" align="right" style="height: 35px;">
+	    		<a href="index.html"><img src="images/de.gif" title="Deutsch" alt="Deutsch" /></a>
+	  			<a href="index_en.html"><img src="images/en.gif" title="English" alt="English" /></a>
+	  		</div>
+	  		<nav>
+		  		<ul>
+		  			<li><a href="">HOME</a></li>
+		  			<li><a href="">TEILPROJEKTE</a>
+		  				<ul>
+		  					<li><a href="">A: Entwicklungen</a>
+		  						<ul>
+		  							<li><a href=""><nobr>Teilprojekt A 01</nobr></a></li>
+		  							<li><a href="">Teilprojekt A 02</a></li>
+		  							<li><a href="">Teilprojekt A 03</a></li>
+		  							<li><a href="">Teilprojekt A 04</a></li>
+		  							<li><a href="">Teilprojekt A 05</a></li>
+		  							<li><a href="">Teilprojekt A 06</a></li>
+		  						</ul>
+		  					</li>
+		  					<li><a href="">B: Bewegungen</a>
+		  						<ul>
+		  							<li><a href=""><nobr>Teilprojekt B 01</nobr></a></li>
+		  							<li><a href="">Teilprojekt B 02</a></li>
+		  							<li><a href="">Teilprojekt B 03</a></li>
+		  							<li><a href="">Teilprojekt B 04</a></li>
+		  							<li><a href="">Teilprojekt B 05</a></li>
+		  							<li><a href="">Teilprojekt B 06</a></li>
+		  						</ul>
+		  					</li>
+		  					<li><a href="">C: Bewertungen</a>
+		  						<ul>
+		  							<li><a href=""><nobr>Teilprojekt C 01</nobr></a></li>
+		  							<li><a href="">Teilprojekt C 02</a></li>
+		  							<li><a href="">Teilprojekt C 03</a></li>
+		  							<li><a href="">Teilprojekt C 04</a></li>
+		  							<li><a href="">Teilprojekt C 05</a></li>
+		  							<li><a href="">Teilprojekt C 06</a></li>
+		  							<li><a href="">Teilprojekt C 07</a></li>
+		  						</ul>
+		  					</li>
+		  				</ul>
+		  			</li>
+		  			<li><a href="">Geschichte</a></li>
+		  			<li><a href="">Angebot</a></li>
+		  			<li><a href="">Termine</a></li>
+		  			<li><a href="">Kontakt</a></li>
+		  		</ul>
+		  	</nav>
+	    </header>
+	    <div id="slider" style="text-align: center;">
+	 		<div id="imageContainer">
+				<ul id="imageBox">
+					<li><img src="images/slides/B05.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.1.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.3.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B05.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.1.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/C02.1.JPG" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/C.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B07.3.JPG" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.3.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B05.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.1.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.3.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B05.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.1.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/C02.1.JPG" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/C.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B07.3.JPG" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="images/slides/B06.3.jpg" onclick="showImg(this)" /></li>
+				</ul>
+			</div>
+			<img id="main-img" src="images/slides/B05.2.jpg" />
+		</div>
+		<script type="text/javascript">
+			function showImg(s){
+				document.getElementById("main-img").src = s.src;
+			}
+		</script>
+ 	</body>
+</html>
