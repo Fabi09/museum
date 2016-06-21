@@ -1,0 +1,188 @@
+body {
+
+	color: #681;
+	background: rgb(130,185,160);
+	min-width: 700px;
+}
+
+.box1 {
+	width: 1000px;
+	padding-left: 10px; 
+	margin: 20px;
+}
+
+/* ----------------Banner----------------- */
+.banner {
+	text-align: left;
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	background-color: white;
+	border-bottom: 5px;
+	margin-bottom:5px;
+	
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+/*-------------Navigation---------------- */
+
+/* navigation bar */
+
+.Nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+.Nav li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+
+.Nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+/* ----Link---- */
+.Nav li a:hover {
+	background-color: #111;
+}
+.active {
+	background-color: #446f5a;
+	display: inline;
+}
+
+.Nav li:last-child {
+	border-right: none;
+}
+
+
+
+/*---------------Navigation Animation----------------------*/
+
+
+
+
+/*----------------Push up menu-----------*/
+
+/* Initial menu */
+.menu {
+
+	background-color: #2f5142;
+	left: -285px; /* start off behind the scenes */
+	height: 100%;
+	position: fixed;
+	width: 235px;
+}
+
+/* Basic styling */
+
+.menu ul {
+	border-top: 1px solid white;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	border-bottom: 1px solid white;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 45px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	padding-top: 3px;
+}
+
+.menu a {
+	color: #fff;
+	font-size: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.icon-close {
+	cursor: pointer;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.icon-menu {
+	color: black;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	padding-top: 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.icon-menu i {
+	margin-right: 5px;
+}
+
+
+/* ---------------Text------------------ */
+
+.Text {
+
+	margin-top: 12px;
+	background-color: white;
+	text-align: left;
+	color: black;
+	font-family: Vivaldi;
+	font-size: 14px;
+	padding-top: 30px;
+	line-height: 1.8;
+	word-spacing: 2px;
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+h1 {
+	
+	padding-left: 30px;
+	text-align: left;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	color: white;
+	background-color: rgb(130,185,160);
+	
+}
+
+h2 {
+	font-size: 16px;
+	color: #333;
+}
+/* ---------------Impressum------------------ */
+.Impressum {
+
+}
+
+.rk {
+
+	text-align: right;
+}
+
