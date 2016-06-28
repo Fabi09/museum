@@ -19,7 +19,7 @@ box-shadow: 0px 5px 15px 5px #333;
 }
 
 .SliderNamePrev{
-	background: url(left.gif) no-repeat center center;
+	background: url(Pictures/left.gif) no-repeat center center;
 	width: 24px;
 	height: 24px;
 	
@@ -30,7 +30,7 @@ box-shadow: 0px 5px 15px 5px #333;
 }
 
 .SliderNameNext{
-	background: url(right.gif) no-repeat center center;
+	background: url(Pictures/right.gif) no-repeat center center;
 	width: 24px;
 	height: 24px;
 	display: block;
