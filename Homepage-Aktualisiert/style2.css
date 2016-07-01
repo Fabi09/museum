@@ -1,0 +1,322 @@
+body {
+
+	color: #681;
+	background: rgb(130,185,160);
+	min-width: 700px;
+}
+
+
+
+/* ----------------Banner----------------- */
+.banner {
+	text-align: left;
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	background-color: white;
+	border-bottom: 5px;
+	margin-bottom:0px;
+	height:160px;
+	
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+/*-------------Navigation---------------- */
+
+/* navigation bar */
+nav{width: 1355px;
+	
+	padding-bottom: 20px;
+	}
+
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+	
+	nav ul {
+	background: gray; 
+	background: linear-gradient(top, #707070 0%, #3B3B3B 100%);  
+	background: -moz-linear-gradient(top, #707070 0%, #3B3B3B 100%); 
+	background: -webkit-linear-gradient(top, #707070 0%,#3B3B3B 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+
+    width:100%;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	font-weight:bold;
+	font-size: 18px;
+	font-family:Open Sans;
+	
+	
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+	
+	nav ul li {
+	float: left;
+}
+	nav ul li:hover {
+		background: red;
+		background: linear-gradient(top, #707070 0%, #3B3B3B 40%);
+		background: -moz-linear-gradient(top, #707070 0%, #3B3B3B 40%);
+		background: -webkit-linear-gradient(top, #707070 0%,#3B3B3B 40%);
+	}
+		nav ul li:hover a {
+			color: white;
+		}
+	
+	nav ul li a {
+		display: block; padding: 25px 40px;
+		color: white; text-decoration: none;
+		min-width: 100px;
+	}
+	nav ul li ul {
+		width: 180px;
+	}
+	nav ul ul {
+	background: #3B3B3B; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
+}
+	nav ul ul li {
+		float: none; 
+		border-top: 1px solid #6b727c;
+		border-bottom: 1px solid #575f6a;
+		position: relative;
+	}
+		nav ul ul li a {
+			padding: 15px 40px;
+			color: #fff;
+		}	
+			nav ul ul li a:hover {
+				background: #3B3B3B;
+			}
+
+			nav ul ul ul {
+	position: absolute; left: 100%; top:0;
+}
+.active {
+	background-color: #446f5a;
+	
+	
+}
+.globus { float:right;
+		padding:8px;}
+
+/*---------------Navigation Animation----------------------*/
+
+
+
+
+/*----------------Push up menu-----------*/
+
+/* Initial menu */
+.menu {
+
+	background-color: #2f5142;
+	left: -285px; /* start off behind the scenes */
+	height: 100%;
+	position: fixed;
+	width: 235px;
+}
+
+/* Basic styling */
+
+.menu ul {
+	border-top: 1px solid white;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	border-bottom: 1px solid white;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 45px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	padding-top: 3px;
+}
+
+.menu a {
+	color: #fff;
+	font-size: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.icon-close {
+	cursor: pointer;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.icon-menu {
+	color: black;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	padding-top: 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.icon-menu i {
+	margin-right: 5px;
+}
+
+
+/* ---------------Text------------------ */
+
+.Text {
+
+	margin-top: 15px;
+	
+	text-align: justify;
+	color: black;
+
+	font-size: 16px;
+	padding-top: 30px;
+	line-height: 1.8;
+	word-spacing: 2px;
+	padding-left: 200px; 
+	padding-right:200px;
+	font-family:Open Sans;
+	
+
+	
+	
+}
+
+h1 {
+	
+	
+	text-align: justify;
+	padding-bottom: 15px;
+	
+	
+	
+}
+
+h2 {
+	font-size: 16px;
+	color: #333;
+}
+.Background{
+
+height:relative;
+	margin-top: 10px;
+	background-color: white;
+	color: black;
+	
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+/* ---------------Images------------------ */
+
+
+.Images img{
+	
+	width: 417px;
+    height: 250px;
+	padding:10px;
+	
+	
+	
+	border-style: groove;
+	border-color: white;
+	border-left-width:5px;
+	border-right-width:5px;
+	
+    
+    -webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+
+.Images ul {
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	padding-top: 150px;
+	
+	
+}
+
+.Images li{
+	float: left;
+	
+	border-right: 2px solid #333;
+}
+
+.A {
+	background-color: rgb(180,160,150); 
+	margin:8px;
+	
+	
+}
+
+.B {
+	background-color: rgb(215,180,105); 
+	margin:8px;
+	
+}
+
+.C {
+	background-color: rgb(125,165,75); 
+	margin:8px;
+}
+
+
+.Images li a:link {
+	display: block;
+	color: black;
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+	
+/* ----Link---- */
+
+.Images li a:active{
+	color:white;
+	
+}
+
+.Images li:last-child {
+	border-right: none;
+}
+
+
+
+
+
+/* ---------------Impressum------------------ */
+.Impressum {
+
+}
+
+.rk {
+
+	text-align: right;
+	padding-top: 20px;
+}
+
