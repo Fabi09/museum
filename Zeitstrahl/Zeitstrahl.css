@@ -1,0 +1,622 @@
+body {
+
+	color: #681;
+	background: rgb(130,185,160);
+	min-width: 700px;
+}
+/*-------------linkes_Pfeile-----------*/
+
+.linkesPfeil-1 {
+	position: absolute;
+	left: 905px;
+	top: 30px;
+	border-right: 10px solid green;
+}
+
+.linkesPfeil-2 {
+	position: absolute;
+	left: 745px;
+	top: 70px;
+	border-right: 40px solid red;
+}
+
+.linkesPfeil-3 {
+	position: absolute;
+	left: 1135px;
+	top: 70px;
+	border-right: 10px solid red;
+}
+
+.linkesPfeil-4 {
+	position: absolute;
+	left: 315px;
+	top: 110px;
+	border-right: 40px solid blue;
+}
+
+.linkesPfeil-5 {
+	position: absolute;
+	left: 785px;
+	top: 110px;
+	border-right: 10px solid blue;
+}
+
+.linkesPfeil-6 {
+	position: absolute;
+	left: 905px;
+	top: 110px;
+	border-right: 5px solid red;
+}
+
+.linkesPfeil-7 {
+	position: absolute;
+	left: 1081px;
+	top: 110px;
+	border-right: 10px solid red;
+}
+
+.linkesPfeil-8 {
+	position: absolute;
+	left: 1222px;
+	top: 110px;
+	border-right: 5px solid green;
+}
+
+.linkesPfeil-9 {
+	position: absolute;
+	left: 110px;
+	top: 220px;
+	border-right: 20px solid red;
+}
+
+.linkesPfeil-10 {
+	position: absolute;
+	left: 638px;
+	top: 220px;
+	border-right: 40px solid blue;
+}
+
+.linkesPfeil-11 {
+	position: absolute;
+	left: 1147px;
+	top: 220px;
+	border-right: 10px solid green;
+}
+
+.linkesPfeil-12 {
+	position: absolute;
+	left: 1222px;
+	top: 220px;
+	border-right: 5px solid green;
+}
+
+.linkesPfeil-13 {
+	position: absolute;
+	left: 690px;
+	top: 260px;
+	border-right: 20px solid blue;
+}
+
+.linkesPfeil-14 {
+	position: absolute;
+	left: 815px;
+	top: 260px;
+	border-right: 5px solid blue;
+}
+
+.linkesPfeil-15 {
+	position: absolute;
+	left: 875px;
+	top: 260px;
+	border-right: 20px solid green;
+}
+
+.linkesPfeil-16 {
+	position: absolute;
+	left: 410px;
+	top: 300px;
+	border-right: 100px solid red;
+}
+
+/*---allgemein--*/
+.linkesPfeil-1, .linkesPfeil-2, .linkesPfeil-3, .linkesPfeil-4, .linkesPfeil-5, .linkesPfeil-6, .linkesPfeil-7, .linkesPfeil-8, .linkesPfeil-9, .linkesPfeil-10, .linkesPfeil-11, .linkesPfeil-12, .linkesPfeil-13, .linkesPfeil-14, .linkesPfeil-15, .linkesPfeil-16 {
+
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+/*-----------------------rechte_Pfeile-------------------*/
+
+.rechtesPfeil-1 {
+	position: absolute;
+	left: 960px;
+	top: 30px;
+	border-left: 10px solid green;
+}
+
+.rechtesPfeil-2 {
+	position: absolute;
+	left: 875px;
+	top: 70px;
+	border-left: 40px solid red;
+}
+
+.rechtesPfeil-3 {
+	position: absolute;
+	left: 1195px;
+	top: 70px;
+	border-left: 10px solid red;
+}
+
+.rechtesPfeil-4 {
+	position: absolute;
+	left: 650px;
+	top: 110px;
+	border-left: 40px solid blue;
+}
+
+.rechtesPfeil-5 {
+	position: absolute;
+	left: 870px;
+	top: 110px;
+	border-left: 10px solid blue;
+}
+
+.rechtesPfeil-6 {
+	position: absolute;
+	left: 948px;
+	top: 110px;
+	border-left: 5px solid red;
+}
+
+.rechtesPfeil-7 {
+	position: absolute;
+	left: 1138px;
+	top: 110px;
+	border-left: 10px solid red;
+}
+
+.rechtesPfeil-8 {
+	position: absolute;
+	left: 1270px;
+	top: 110px;
+	border-left: 5px solid green;
+}
+
+.rechtesPfeil-9 {
+	position: absolute;
+	left: 205px;
+	top: 220px;
+	border-left: 20px solid red;
+}
+
+.rechtesPfeil-10 {
+	position: absolute;
+	left: 915px;
+	top: 220px;
+	border-left: 40px solid blue;
+}
+
+.rechtesPfeil-11 {
+	position: absolute;
+	left: 1195px;
+	top: 220px;
+	border-left: 10px solid green;
+}
+
+.rechtesPfeil-12 {
+	position: absolute;
+	left: 1270px;
+	top: 220px;
+	border-left: 5px solid green;
+}
+
+.rechtesPfeil-13 {
+	position: absolute;
+	left: 770px;
+	top: 260px;
+	border-left: 20px solid blue;
+}
+
+.rechtesPfeil-14 {
+	position: absolute;
+	left: 858px;
+	top: 260px;
+	border-left: 5px solid blue;
+}
+
+.rechtesPfeil-15 {
+	position: absolute;
+	left: 995px;
+	top: 260px;
+	border-left: 20px solid green;
+}
+
+.rechtesPfeil-16 {
+	position: absolute;
+	left: 1065px;
+	top: 300px;
+	border-left: 100px solid red;
+}
+
+/*---allgemein--*/
+.rechtesPfeil-1, .rechtesPfeil-2, .rechtesPfeil-3, .rechtesPfeil-4, .rechtesPfeil-5, .rechtesPfeil-6, .rechtesPfeil-7, .rechtesPfeil-8, .rechtesPfeil-9, .rechtesPfeil-10, .rechtesPfeil-11, .rechtesPfeil-12, .rechtesPfeil-13, .rechtesPfeil-14, .rechtesPfeil-15, .rechtesPfeil-16 {
+
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+/*-----------------Projekte--------------*/
+
+/*-----Projekt_C02-----*/
+.C02 ul {
+	position: absolute;
+	top: 30px;
+	left: 915px;
+	right: 406px;
+	background-color: green;
+}
+
+.C02 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 3px
+}
+
+/*-----Projekt_B07-----*/
+.B07 ul {
+	position: absolute;
+	top: 70px;
+	left: 785px;
+	right: 491px;
+	background-color: red;
+}
+
+.B07 li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 21px
+}
+
+/*-----Projekt_B03-----*/
+.B03 ul {
+	position: absolute;
+	top: 70px;
+	left: 1145px;
+	right: 171px;
+	background-color: red;
+}
+
+.B03 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 6px
+}
+
+/*-----Projekt_A01-----*/
+
+.A01 ul {
+	position: absolute;
+	top: 110px;
+	left: 355px;
+	right: 716px;
+	background-color: blue;
+}
+.A01 li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 122px
+}
+
+/*-----Projekt_A04-----*/
+.A04 ul {
+	position: absolute;
+	top: 110px;
+	left: 795px;
+	right: 496px;
+	background-color: blue;
+}
+
+.A04 li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 13px
+}
+
+/*-----Projekt_B04-----*/
+.B04 ul {
+	position: absolute;
+	top: 110px;
+	left: 910px;
+	right: 418px;
+	background-color: red;
+}
+
+.B04 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 0px;
+}
+
+/*-----Projekt_B06-----*/
+.B06 ul {
+	position: absolute;
+	top: 110px;
+	left: 1091px;
+	right: 228px;
+	background-color: red;
+}
+
+.B06 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 5px
+}
+
+/*-----Projekt_C04-----*/
+.C04 ul {
+	position: absolute;
+	top: 110px;
+	left: 1227px;
+	right: 96px;
+	background-color: green;
+}
+
+.C04 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 2px;
+}
+
+/*-----Projekt_B01a-----*/
+.B01a ul {
+	position: absolute;
+	top: 220px;
+	left: 130px;
+	right: 1161px;
+	background-color: red;
+}
+
+.B01a li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 14px
+}
+
+/*-----Projekt_A05-----*/
+.A05 ul {
+	position: absolute;
+	top: 220px;
+	left: 678px;
+	right: 451px;
+	background-color: blue;
+}
+
+.A05 li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 95px
+}
+
+/*-----Projekt_C05-----*/
+.C05 ul {
+	position: absolute;
+	top: 220px;
+	left: 1157px;
+	right: 171px;
+	background-color: green;
+}
+
+.C05 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 0px
+}
+
+/*-----Projekt_C06-----*/
+.C06 ul {
+	position: absolute;
+	top: 220px;
+	left: 1227px;
+	right: 96px;
+	background-color: green;
+}
+
+.C06 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 2px;
+}
+
+/*-----Projekt_A03-----*/
+.A03 ul {
+	position: absolute;
+	top: 260px;
+	left: 710px;
+	right: 596px;
+	background-color: blue;
+}
+
+.A03 li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 5px
+}
+
+/*-----Projekt_A06-----*/
+.A06 ul {
+	position: absolute;
+	top: 260px;
+	left: 820px;
+	right: 508px;
+	background-color: blue;
+}
+
+.A06 li a {
+
+	color: white;
+	padding: 2.5px 5px;
+	margin-left: 0px
+}
+
+/*-----Projekt_C03-----*/
+.C03 ul {
+	position: absolute;
+	top: 260px;
+	left: 895px;
+	right: 371px;
+	background-color: green;
+}
+
+.C03 li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 26px
+}
+
+/*-----Projekt_B01b-----*/
+.B01b ul {
+	position: absolute;
+	top: 300px;
+	left: 510px;
+	right: 301px;
+	background-color: red;
+}
+
+.B01b li a {
+
+	color: white;
+	padding: 2.5px 10px;
+	margin-left: 250px
+}
+
+/*---allgemein--*/
+.C02 ul, .B07 ul, .B03 ul, .A01 ul, .A04 ul, .B04 ul, .B06 ul, .C04 ul, .B01a ul, .A05 ul, .C05 ul, .C06 ul, .A03 ul, .A06 ul, .C03 ul, .B01b ul {
+	height: 20px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	font-size: 12px;
+}
+
+.C02 li, .B07 li, .B03 li, .A01 li, .A04 li, .B04 li, .B06 li, .C04 li, .B01a li, .A05 li, .C05 li, .C06 li, .A03 li, .A06 li, .C03 li, .B01b li {
+	float: left;
+	padding-top: 0px
+}
+
+.C02 li a, .B07 li a, .B03 li a, .A01 li a, .A04 li a, .B04 li a, .B06 li a, .C04 li a, .B01a li a, .A05 li a, .C05 li a, .C06 li a, .A03 li a, .A06 li a, .C03 li a, .B01b li a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-family: Verdana;
+}
+
+.C02 li a:hover, .B07 li a:hover, .B03 li a:hover, .A01 li a:hover, .A04 li a:hover, .B04 li a:hover, .B06 li a:hover, .C04 li a:hover, .B01a li a:hover, .A05 li a:hover, .C05 li a:hover, .C06 li a:hover  { 
+	background-color: black;
+}
+
+.A03 li a:hover, .A06 li a:hover, .C03 li a:hover, .B01b li a:hover {
+	background-color: black;
+}
+
+.C02 li:last-child, .B07 li:last-child, .B03 li:last-child, .A01 li:last-child, .A04 li:last-child, .B04 li:last-child, .B06 li:last-child, .C04 li:last-child, .B01a li:last-child, .A05 li:last-child, .C05 li:last-child {
+	border-right: none;
+}
+
+.C06 li:last-child, .A03 li:last-child, .A06 li:last-child, .C03 li:last-child, .B01b li:last-child {
+	border-right: none;
+}
+
+/*--------------------TimeTable-----------------*/
+
+/*--------TimeTable-1-------*/
+.Time-1 ul {
+	position: absolute;
+	margin-right: 1107px;
+	left: 10px;
+}
+
+/*--------TimeTable-2-------*/
+.Time-2 ul {
+	position: absolute;
+	margin-right: 1107px;
+	left: 273px;
+}
+
+/*--------TimeTable-3-------*/
+.Time-3 ul {
+	position: absolute;
+	margin-right: 1107px;
+	left: 1030px;
+}
+
+/*--------TimeTable-4-------*/
+.Time-4 ul {
+	position: absolute;
+	margin-right: 1107px;
+	left: 1220px;
+}
+
+/*---allgemein--*/
+.Time-1 ul, .Time-2 ul, .Time-3 ul, .Time-4 ul {
+
+	top: 150px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #ccccff;
+	border-style: groove;
+	border-color: white;
+	border-left-width: 2px;
+	border-right-width: 2px;
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+.Time-1 li, .Time-2 li, .Time-3 li, .Time-4 li {
+	float: left;
+	border-right: 22px solid #ccccff;
+}
+
+.Time-1 li a, .Time-2 li a, .Time-3 li a, .Time-4  li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: Verdana;
+	font-size: 14px;
+}
+.Time-1 li a:hover, .Time-2 li a:hover, .Time-3 li a:hover, .Time-4  li a:hover {
+	background-color: white;
+}
+.Time-1 li:last-child, .Time-2 li:last-child, .Time-3 li:last-child, .Time-4  li:last-child {
+	border-right: none;
+}
+#Chr a{
+	font-size: 12px;
+}
+#Chr a:hover {
+	background-color: #ccccff;
+}
+
+.active {
+	background-color: #446f5a;
+}
