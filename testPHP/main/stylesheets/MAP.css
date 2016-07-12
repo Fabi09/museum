@@ -1,0 +1,42 @@
+h1{
+	text-align:center;
+}
+ 
+.image {
+	overflow: hidden;
+	width: 100%;
+   	position: relative; 
+   	display: inline-block;
+}
+
+h2 { 
+   position: absolute; 
+   top: 42%; 
+   left: 3%; 
+   width: 100%; 
+}
+
+h2 span { 
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 9px; 
+}
+
+.image img {
+    -webkit-transition: all 10s ease; /* Safari and Chrome */
+    -moz-transition: all 10s ease; /* Firefox */
+    -ms-transition: all 10s ease; /* IE 9 */
+    -o-transition: all 10s ease; /* Opera */
+    transition: all 10s ease;
+}
+
+.image:hover img {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
