@@ -12,10 +12,21 @@ INITIALIZE_GET_VAR ('language',		DEFAULT_LANGUAGE);
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-    	<title><?php echo 'LBL_SITE_'.$_GET['site'].'_'.$_GET['language'] ?></title>
+    	<title>
+    	<?php
+    		if (!empty ($_GET['project'])){
+				echo constant('LBL_PROJECT_'.strtoupper($_GET['project']).'_'.$_GET['language']);
+			} else {
+				echo constant('LBL_SITE_'.strtoupper($_GET['site']).'_'.$_GET['language']);
+			}
+		?></title>
   
     	<meta charset="UTF-8"/>
     	<link href="<?php echo DIR_STYLESHEETS.'style.css'; ?>" rel="stylesheet" type="text/css">
+    	<link href="<?php echo DIR_STYLESHEETS.'PROJECT.css'; ?>" rel="stylesheet" type="text/css">
+    	<link href="<?php echo DIR_STYLESHEETS.'MAP.css'; ?>" rel="stylesheet" type="text/css">
+    	<link href="<?php echo DIR_STYLESHEETS.'HomePageSlider.css'; ?>" rel="stylesheet" type="text/css">
+    	
     	<?php 
     	if (file_exists(DIR_STYLESHEETS.strtoupper($_GET['site']).'.css') && $_GET['site'] != 'Home') {
 			echo '<link href="';
@@ -37,7 +48,7 @@ INITIALIZE_GET_VAR ('language',		DEFAULT_LANGUAGE);
     		}
 		 */
     	?>
-    	<link href="<?php echo DIR_STYLESHEETS.'PROJECTS.css'; ?>" rel="stylesheet" type="text/css">
+    	<script type="text/javascript" src="<?php echo DIR_JAVASCRIPTS.'HomePageSlider.js'; ?>"></script>
   	</head>
   	<body>
   		<noscript>

@@ -4,6 +4,6 @@
 
 <?php
 
-ECHO_CSV_TEXTFILE('PROJECTS', 'C', '', 'C.csv');
+ECHO_CSV_FILE('PROJECTS', 'C', '', 'C.csv');
 
 ?>

@@ -24,7 +24,7 @@ function ECHO_JS ($href) {
 
 function RETURN_TAG_AREA ($alt, $title, $c1, $c2, $c3, $c4, $href) {
 	# Function to return area tag for MAP
-	return '<area shape="rect" alt="'.$alt.'" title="'.$title.'" coords="'.$c1.','.$c2.','.$c3.','.$c4.'" href="'.$href.'" target="_blank" />';
+	return '<area shape="rect" alt="'.$alt.'" title="'.$title.'" coords="'.$c1.','.$c2.','.$c3.','.$c4.'" href="'.$href.'" target="_self" />';
 }
 
 function RETURN_CSS_HREF ($href, $site, $project, $subproject, $language) {

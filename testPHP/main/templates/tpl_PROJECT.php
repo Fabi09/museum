@@ -1,5 +1,5 @@
 <h1>
-	<?php echo constant('LBL_PROJECT_'.$_GET['project'].'_'.$_GET['language']) ;?>
+	<?php echo constant('LBL_PROJECT_'.strtoupper($_GET['project']).'_'.$_GET['language']) ;?>
 </h1>
 
 <?php
@@ -13,22 +13,18 @@
 			$pr_array = array('B01','B02','B03','B04','B05','B06', 'B07');
 			break;
 		case 'C':
-			$pr_array = array('C01','C02','C03','C04','C05','C06', 'C07');
+			$pr_array = array('C02','C03','C04','C05','C06', 'C07');
 			break;
 		default:
 			break;
 	}
 	
 	$pr_length = count($pr_array);
-	$i = 0;
-
-	while ($i < $pr_length) {
+	for ($i=0; $i < $pr_length; $i++) {
 		echo '<div class="read_more_box">';
 		
-		ECHO_CSV_TEXTFILE('PROJECTS', $pr, '', $pr_array[$i].'.csv');
+		ECHO_CSV_FILE('PROJECTS', $pr, '', $pr_array[$i].'.csv');
 		
 		echo '</div>';
-		
-		$i++;
 	}
 ?>

@@ -16,8 +16,8 @@ define ('LBL_LANGUAGE_EN', 'English');
 define ('LBL_SITE_HOME_DE', 'Home');
 define ('LBL_SITE_HOME_EN', 'Home');
 
-define ('LBL_SITE_PROJECT_DE', 'Teilprojekte');
-define ('LBL_SITE_PROJECT_EN', 'Projects');	
+define ('LBL_SITE_PROJECTS_DE', 'Teilprojekte');
+define ('LBL_SITE_PROJECTS_EN', 'Projects');	
 	
 define ('LBL_SITE_HISTORY_DE', 'Geschichte');
 define ('LBL_SITE_HISTORY_EN', 'History');

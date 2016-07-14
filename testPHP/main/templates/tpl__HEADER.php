@@ -16,7 +16,7 @@
 	<nav>
 		<ul>
 			<li><?php ECHO_TAG_A('index.php',constant('LBL_SITE_HOME_EN'),'','',$_GET['language'],'', constant ('LBL_SITE_HOME_'.$_GET['language'])) ?> </li>
-			<li><?php ECHO_TAG_A('index.php',constant('LBL_SITE_PROJECT_EN'),'','',$_GET['language'],'', constant ('LBL_SITE_PROJECT_'.$_GET['language'])) ?> 
+			<li><?php ECHO_TAG_A('index.php',constant('LBL_SITE_PROJECTS_EN'),'','',$_GET['language'],'', constant ('LBL_SITE_PROJECTS_'.$_GET['language'])) ?> 
 				<ul>
 					<li><?php ECHO_TAG_A('index.php','','A','',$_GET['language'],'', constant ('LBL_PROJECT_A_'.$_GET['language'])) ?>
 						<ul>

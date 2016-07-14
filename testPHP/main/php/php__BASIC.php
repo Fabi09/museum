@@ -1,56 +1,7 @@
 <?php
 
-function ECHO_CSV_TEXTFILE ($site, $project, $subproject, $file) {
-	 # Function to return html text content
-	 
-	 $row = 1;
-	 $f = $site."/";
-	 if (isset($project)) {
-	 	$f = $f.$project;
-		 if (isset($subproject)) {
-		 	$f = $f.$subproject."/";
-		 }
-	 }
-	 if (file_exists($f)) {
-	 	if (($handle = fopen($f.$file, "r")) !== FALSE) {
-	 		while (($data = fgetcsv($handle, 100, ";")) !== FALSE) {
-				$tag = $data[0];
-	 			if ($row > 1){
-	 				switch ($tag) {
-					 	case 'h1':
-							 echo "<h1>".$data[2]."</h1>";
-						 	break;
-					 	case 'h2':
-							 echo "<h2>".$data[2]."</h2>";
-						 	break;
-						 case 'h3':
-							 echo "<h3>".$data[2]."</h3>";
-							 break;
-						 case 'p';
-					 	 	ECHO_TAG_P( RETURN_FILE_PATH($f,$data[2],$data[3]));
-					 	 	break;
-					 	case 'img':
-					 	 	ECHO_TAG_IMG( RETURN_FILE_PATH($f,$data[2],$data[3]), $data[1],$data[4], $data[4]);
-					 	 	break;
-					 	case 'video':
-						 	ECHO_TAG_VIDEO($data[3]);
-					 	case 'a';
-					 	 	ECHO_TAG_A('#', '', '', '', '', $data[1], $data[2]);
-					 	 	break;
-					 	default:
-						 	echo '';
-						 	break;
-					}
-				}
-				$row++;
-			}
-	 	}
-		fclose($handle);
-	}
-}
-
 function RETURN_FILE_PATH($path1, $path2, $path3){
-	# Function to concatenate paths
+	# Function to concatenate paths (e.g. ../A/A01)
 	if (isset($path2)) {
 		$path1 = $path1.'/'.$path2;
 	}
@@ -107,11 +58,107 @@ function ECHO_IMAGE_MAP ($file ) {
 	 }
 }  
 
-function SET_CSV_ROW ($file, $arr) {
+#-----------CSV functions
+function RETURN_CSV_FILE ($path, $file){
+	$csv = array();
+	$fp = fopen($path.$file, "r");
+	
+	while (($result = fgetcsv($file)) !== false){
+		$csv[] = $result;
+	}
+	
+	fclose($file);
+	
+	return $csv;
+}
+
+function ECHO_CSV_FILE ($site, $project, $subproject, $file) {
+	 # Function to return html text content
+	 
+	 $row = 1;
+	 $f = $site."/";
+	 if (isset($project)) {
+	 	$f = $f.$project;
+		 if (isset($subproject)) {
+		 	$f = $f.$subproject."/";
+		 }
+	 }
+	 if (file_exists($f)) {
+	 	if (($handle = fopen($f.$file, "r")) !== FALSE) {
+	 		while (($data = fgetcsv($handle, 100, ";")) !== FALSE) {
+				$tag = $data[0];
+	 			if ($row > 1){
+	 				switch ($tag) {
+					 	case 'h1':
+							 echo "<h1>".$data[2]."</h1>";
+						 	break;
+					 	case 'h2':
+							 echo "<h2>".$data[2]."</h2>";
+						 	break;
+						 case 'h3':
+							 echo "<h3>".$data[2]."</h3>";
+							 break;
+						 case 'p';
+					 	 	ECHO_TAG_P( RETURN_FILE_PATH($f,$data[2],$data[3]));
+					 	 	break;
+					 	case 'img':
+					 	 	ECHO_TAG_IMG( RETURN_FILE_PATH($f,$data[2],$data[3]), $data[1],$data[4], $data[4]);
+					 	 	break;
+					 	case 'video':
+						 	ECHO_TAG_VIDEO($data[3]);
+					 	case 'a';
+					 	 	ECHO_TAG_A('#', '', '', '', '', $data[1], $data[2]);
+					 	 	break;
+					 	default:
+						 	echo '';
+						 	break;
+					}
+				}
+				$row++;
+			}
+	 	}
+		fclose($handle);
+	}
+}
+
+function APPEND_CSV_ROW ($file, $row) {
 	# Function to add new row(array) in csv-file
-	if (file_exists($file)) {
-		$fp = fopen($file, 'a');
-		fputcsv($fp, $arr);
+	$fp = fopen($file, 'a');
+	fputcsv($fp, $row);
+	fclose($fp);
+}
+
+function OVERWRITE_CSV ($file, $row) {
+	# Function to overwrite csv-file content
+	$fp = fopen($file, 'w+');
+	fputcsv($fp, $arr);
+	fclose($fp);
+}
+
+function DELETE_CSV_ROWELEMENT ($file, $elem) {
+	# Function to delete row
+	if (file_exists($file)){
+		$lines=file($file);
+		$num = sizeof($lines);
+		
+		// delete element in row
+		for ($i = 0; $i < $num; $i++) {  
+        	$entry = explode ("\t", $lines[$i]);
+        	if ($entry[0] == $elem) {
+        		$num--;
+        		for ($j = $i; $j < $num; $j++){
+        			$lines[$j] = $lines[$j+1];
+				}
+			}
+		}
+		
+		// save changes 
+		$fp = fopen($file,"w+");
+		if ($fp) {
+			for ($i=0; $i < $num; $i++) {
+				fwrite($fp, $lines[$i]);
+			} 
+		}
 		fclose($fp);
 	}
 }
