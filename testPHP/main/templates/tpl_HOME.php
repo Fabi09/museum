@@ -1,5 +1,9 @@
 <h1>
-	<?php echo constant('LBL_SITE_'.strtoupper($_GET['site']).'_'.$_GET['language']) ;?>
+	<?php if (!empty ($_GET['site'])){
+		echo constant('LBL_SITE_'.strtoupper($_GET['site']).'_'.$_GET['language']) ;
+	} else {
+		echo constant('LBL_SITE_HOME'.'_'.$_GET['language']);
+	}?>
 </h1>
 	
 <div class="timeline">

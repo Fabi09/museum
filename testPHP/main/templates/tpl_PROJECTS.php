@@ -1,4 +1,5 @@
-<?php
+
+<?php	
 	$pr = array('A', 'B', 'C', 'M');
 	$l = count($pr);
 	

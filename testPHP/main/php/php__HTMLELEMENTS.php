@@ -95,7 +95,7 @@ function ECHO_TAG_A ($href, $href_site, $href_project, $href_subproject, $href_l
 }
 
 
-function ECHO_TAG_IMG ($img, $class, $height = '', $width = '')
+function ECHO_TAG_IMG ($img, $class = '', $height = '', $width = '')
 {
 	# => Function to return an image-tag
 	# Parameters:
@@ -132,11 +132,15 @@ function RETURN_TAG_IMG ($img, $alt, $height)
 	return '<img src="'.$img.'" alt="'.$alt.'" height="'.$height.'">';
 }
 
-function ECHO_TAG_P ($file) {
+function ECHO_TAG_TEXT ($url, $file) {
 	# Function tu return txt-file content
-	if (file_exists($file)) {
-		$txt = file_get_contents($file);
-		echo nl2br($txt);
+	if (substr ($file, -4) == '.txt') {
+		if (file_exists($url.'texts/'.$file)){
+			$txt = file_get_contents($url.'texts/'.$file);
+			echo nl2br($txt);
+		}	
+	} else {
+		echo $file;
 	}	
 }
 

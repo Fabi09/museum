@@ -37,7 +37,7 @@
 					<li><?php ECHO_TAG_A('index.php','','C','',$_GET['language'],'', constant ('LBL_PROJECT_C_'.$_GET['language'])) ?>
 						<ul>
 							<?php 
-							for ($i=1; $i < 7; $i++) { 
+							for ($i=2; $i < 8; $i++) { 
 								echo '<li>'; ECHO_TAG_A('index.php','','C','C0'.$i,$_GET['language'],'', 'C 0'.$i); echo '</li>';
 							}?>
 						</ul>
@@ -51,7 +51,7 @@
 			<li><?php ECHO_TAG_A('index.php',constant('LBL_SITE_CONTACT_EN'),'','',$_GET['language'],'', constant ('LBL_SITE_CONTACT_'.$_GET['language'])) ?></li>
 
 			<div class="globus">
-				<?php ECHO_TAG_A('index.php',constant('LBL_SITE_GLOBE_EN'),'','',$_GET['language'],'', RETURN_TAG_IMG (IMG_GLOBE, 'Image Map', 40)) ?>
+				<?php ECHO_TAG_A('index.php',constant('LBL_SITE_MAP_EN'),'','',$_GET['language'],'', RETURN_TAG_IMG (IMG_GLOBE, 'Image Map', 40)) ?>
 			</div>
 		</ul>
 	</nav>

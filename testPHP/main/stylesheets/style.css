@@ -192,18 +192,21 @@ nav ul ul {
 	font-family:Open Sans;
 }
 
-h1 { text-align: justify; padding-bottom: 10px; font-size: 20px; margin-left:50px;}
+h1 { text-align: left; padding-bottom: 10px; font-size: 20px; margin-left:20px;}
 
-h2 { font-size: 16px; color: #333; margin-left:10px; }
+h2 { font-size: 16px; color: #333; margin-left:20px; }
 
-p { font-size:14px; margin-left:40px;}
+p { text-align: justify; }
+
+.Background p { font-size:14px; }
 
 .Background{
+	overflow: hidden;
 	margin:0px;
 	background-color: white;
 	color: black;
 	min-height: 1100px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	border-left-width: 2px;
 	border-right-width: 2px;
 	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
@@ -213,13 +216,12 @@ p { font-size:14px; margin-left:40px;}
 /* ---------------Images------------------ */
 
 .Images {
-	margin-bottom: 50px;
-	margin-top: 30px;
+	margin-top: 40px;
     width: 330px;
     position: relative;
 	float:left;
-	bottom:0px;
-	margin-right: 55px;	
+	bottom:0px;	
+	margin-right:50px;
 }
 
 .Images span{
