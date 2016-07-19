@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+
+	<!-----------------HEAD--------------------->
+	<head>
+		<title>SFB RESSOURCEN</title>
+
+		<link href="styleHomepage.css" type="text/css" rel="stylesheet"/>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+        <meta charset="ISO-8859-1"/>
+    	<link rel="stylesheet" type="text/css" href="SliderStyleHomepage.css" />
+    
+    	
+    	
+	</head>
+
+	<!-----------------BODY--------------------->
+	<body>
+
+		<!--Banner Bild-->
+		<div class="banner">
+			<img src="Logo-uni-tuebingen.png"/>
+		</div>
+
+		<!--Navigation bar-->
+		<div class="Nav">
+			<ul>
+				<li style="float:left">
+					<a class="active" href="#about">Home</a>
+				</li>
+
+				<li>
+					<a href="">TEILPROJEKTE</a>
+
+				<li>
+
+				<li>
+					<a href="#">Geschichte</a>
+				</li>
+
+				<li>
+					<a href="#">Angebot</a>
+				</li>
+
+				<li>
+					<a href="#">Termine</a>
+				</li>
+
+				<li>
+					<a href="#">Kontakt</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<!---------------Push-Up Menu-------------->
+
+		<div class="menu">
+
+			<!-- Menu icon -->
+			<div class="icon-close">
+				<img src="close.png">
+			</div>
+
+			<!-- Menu -->
+			<ul>
+				<li>
+					<a href="#">A: Entwicklungen</a>
+				</li>
+				<li>
+					<a href="#">B: Bewegungen</a>
+				</li>
+				<li>
+					<a href="#">C: Bewertungen</a>
+				</li>
+				<li>
+					<a href="#">Minigraduiertenkolleg</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--Menu Main body -->
+		<div class="icon-menu">
+			<i class="fa fa-bars"></i>
+			Gruppen Projekte
+
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="appHomepage.js"></script>
+
+		<!-----------------------Inhalt------------------------->
+		
+		<div class="Background">
+			
+			
+			<!--------------Image slider-------------------->
+			 <div id="slider" style="text-align: center;">
+	 		<div id="imageContainer">
+				<ul id="imageBox">
+					<li><img src="A01_1.jpg" onclick="showImg(this)" /></li>
+					<li><img src="A01_2.jpg" onclick="showImg(this)" /></li>
+					<li><img src="A01_3.jpg" onclick="showImg(this)" /></li>
+					<li><img src="A01_4.jpg" onclick="showImg(this)" /></li>
+					<li><img src="A01_5.jpg" onclick="showImg(this)" /></li>
+					<li><img src="A01_6.jpg" onclick="showImg(this)" /></li>
+	
+				</ul>
+			</div>
+			<img id="main-img" src="A01_1.jpg" />
+		</div>
+		<script type="text/javascript">
+			function showImg(s){
+				document.getElementById("main-img").src = s.src;
+			}
+		</script>
+			
+	
+			
+			<!--------------Bildermenu-------------------->
+
+			<div class="Images">
+
+				<ul>
+
+					<li class="A">
+						<img src="A.jpg">
+						<a href="#">Projekt A</a>
+					</li>
+					<li class="B">
+						<img src="B.jpg">
+						<a href="#">Projekt B</a>
+					</li>
+					<li class="C">
+						<img src="C.jpg">
+						<a href="#">Projekt C</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<!--------------Impressum---------------->
+		<footer>
+			<div class="Impressum">
+
+				<div class="rk">
+					<img src="SFB1070-Logo.png"/>
+				</div>
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>
