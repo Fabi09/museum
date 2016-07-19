@@ -1,0 +1,80 @@
+
+#sliderFrame, #sliderFrame div {
+    box-sizing: content-box;
+}
+
+#sliderFrame 
+{
+    width:920px;
+    margin:0 auto; /*center-aligned*/
+    padding:20px;
+    box-shadow: 0 0 5px #BBB;
+    border:1px solid #CCC;
+    background-color:#FFF;
+}
+
+#slider, #slider .sliderInner {
+    width:680px;height:306px;/* Must be the same size as the slider images */
+    border-radius:0px;
+}
+
+#slider {
+    background-color:white;
+    float:left;
+    position:relative;
+ }
+
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+#slider .navBulletsWrapper  {
+    display:none;
+}
+
+/* --------- Others ------- */
+
+#slider img, #slider>b, #slider a>b {
+    position:absolute; border:none; display:none;
+}
+
+#slider .sliderInner {
+    overflow:hidden;
+    position:absolute; top:0; left:0;
+}
+
+#slider>a {display:none;}
+
+
+
+/* -- thumbnails -- */
+#thumbs 
+{
+    float:left;
+    margin-left:10px;
+    width:230px;
+    font:normal 11px/13px Arial;
+    border-top:1px solid #CCC;
+    color:#666;
+}
+#thumbs .thumb 
+{
+    border:1px solid #CCC;
+    border-top:1px solid #FFF;
+    padding:11px 8px;
+    background:#EEE;
+    cursor:pointer;
+}
+#thumbs .thumb-on 
+{
+    background:#FFF;
+}
+
+#thumbs img{border:1px solid #DDD; cursor:pointer; width:70px; height:44px;}
+
+#thumbs .frame {float:left;padding:2px;border:1px solid #CCC;background:white;border-radius:3px;box-shadow:0 0 3px #BBB;font-size:0;line-height:0;}
+#thumbs .thumb-content {float:left;width:110px;padding-left:18px;}
+
+/* Captions in #thumbs .thumb-content */
+#thumbs .thumb-content p {font-weight:bold; color:#BF5D9B; margin:0 0 3px;padding:0;}
+#thumbs .thumb-on .thumb-content p {color:#BB0000;}
+
