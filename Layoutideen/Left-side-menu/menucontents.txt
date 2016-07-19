@@ -1,0 +1,11 @@
+	<div id="sideviewmenu">
+
+<ul class="menulinks">
+<li><a href="#">Home</a></li>
+<li><a href="#">Aktuelles</a></li>
+<li><a href="#">Über Uns</a></li>
+<li><a href="#">Projekte</a></li>
+<li><a href="http://uni-tuebingen.de">Kontakt</a></li>
+</ul>
+
+</div>

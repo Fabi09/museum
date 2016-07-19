@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Asul:400,700' rel='stylesheet' type='text/css'>
+
+<link type="text/css" rel="stylesheet" href="sideviewmenu.css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type="text/css">
+	
+
+<script src="sideviewmenu.js"> </script>
+
+<script>
+
+jQuery(function(){ // on DOM Load
+	sideviewmenu({ // call sideviewmenu() function
+		menuid: 'sideviewmenu',
+		onopenclose:function(state){ // state is either "open" or "closed"
+			// custom code
+		}
+	})
+})
+
+</script>
+		<title>
+			
+		</title>
+	</head>
+	<body>
+		<!--Banner Bild-->
+		<div class="banner">
+			<img src="logo-uni-tuebingen.png"/>
+			<img src="SFB1070-Logo.png" align="right" height="100px" width="100px"/>
+		</div>
+	
+<a style="text-transform: uppercase">menu</a>		
+		<div class="toggler" title="Menu" onClick="sideviewmenu.toggle()"> </div>
+		
+<p><img src="rsz_sfb1070_data_final2.jpg" align="center" usemap="#map" alt="World Map"/>
+		</p>
+		<p align="center">
+			<map name="map">
+				<area shape="rect" alt="B04" title="B04" style="outline-color: red; outline-width: 100px " coords="581,168,610,188" href="#" target="_blank" />
+				<area shape="rect" alt="A02" title="A02" coords="114,250,145,274" href="#" target="_blank" />
+				<area shape="rect" alt="A02" title="A02" coords="60,273,90,293" href="http://uni-tuebingen.de" target="_blank" />
+				<area shape="rect" alt="ZV" title="ZV" coords="473,1029,507,1051" href="#" target="_blank" />
+				<area shape="rect" alt="B03" title="B03" coords="301,180,330,200" href="http://uni-tuebingen.de" target="_blank" />
+			</map>
+		</p>
+		
+	</body>
+</html>
