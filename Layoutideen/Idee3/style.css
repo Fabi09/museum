@@ -1,0 +1,111 @@
+
+body {
+    color: rgb(130,185,160);
+	background: #c0d8cc;
+	min-width: 700px;
+}
+
+
+
+
+/* ----Banner---- */
+.banner{
+	text-align:left;
+	
+	border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width:7px;
+	border-right-width:7px;
+	
+	
+	background-color: white;
+    -webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	
+}
+
+
+/*-------------Navigation---------------- */
+
+/* navigation bar */
+
+.Nav ul {
+	width: 268px;
+	float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    background-color: rgb(130,185,160);
+    
+    -webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+.Nav li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    
+    border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width:7px;
+	border-right-width:7px;
+}
+
+/* Change the link color on hover */
+.Nav li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.Nav li a:active {
+    background-color: black;
+}
+
+/* ---------------Text------------------ */
+
+.Text{
+	
+	width: 737px;
+    height: 1000px;
+	float: right;
+	
+	margin-right:268px;
+	
+
+    border-style: groove;
+	border-color: rgb(130,185,160);
+	border-left-width:7px;
+	border-right-width:7px;
+	
+	
+	background-color:white;
+	text-align: justify;
+	color: black;
+	font-family: Vivaldi;
+	font-size: 15px;
+	font-style: italic;
+	line-height: 1.8;
+	word-spacing: 4px;
+	
+	
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	
+}
+
+
+
+
+
+
+
+
+
+
+
