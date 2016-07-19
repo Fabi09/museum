@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+
+	<!-----------------HEAD--------------------->
+	<head>
+		<title>SFB RESSOURCEN</title>
+
+		<link href="styleHomepage.css" type="text/css" rel="stylesheet"/>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+        <meta charset="ISO-8859-1"/>
+    	
+    
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="keywords" content="slideman, sliderman.js, javascript slider, jquery, slideshow, effects" />
+	<meta name="description" content="Sliderman" />
+	
+	<!-- sliderman.js -->
+	<script type="text/javascript" src="HomePageSlider.js"></script>
+	<link rel="stylesheet" type="text/css" href="HomePageSlider.css" />
+	<!-- /sliderman.js -->
+	<style type="text/css">
+		* { outline: none; }
+		.c { clear: both; }
+		#wrapper { margin: 0 auto; padding-left:290px; width: 960px; }
+		
+	</style>
+
+	
+    	
+    	
+    	
+    	
+    	
+	</head>
+
+	<!-----------------BODY--------------------->
+	<body>
+
+		<!--Banner Bild-->
+		<div class="banner">
+			<img src="Logo-uni-tuebingen.png"/>
+		</div>
+
+		<!--Navigation bar-->
+		<div class="Nav">
+			<ul>
+				<li style="float:left">
+					<a class="active" href="#about">Home</a>
+				</li>
+
+				<li>
+					<a href="">TEILPROJEKTE</a>
+
+				<li>
+
+				<li>
+					<a href="#">Geschichte</a>
+				</li>
+
+				<li>
+					<a href="#">Angebot</a>
+				</li>
+
+				<li>
+					<a href="#">Termine</a>
+				</li>
+
+				<li>
+					<a href="#">Kontakt</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<!---------------Push-Up Menu-------------->
+
+		<div class="menu">
+
+			<!-- Menu icon -->
+			<div class="icon-close">
+				<img src="close.png">
+			</div>
+
+			<!-- Menu -->
+			<ul>
+				<li>
+					<a href="#">A: Entwicklungen</a>
+				</li>
+				<li>
+					<a href="#">B: Bewegungen</a>
+				</li>
+				<li>
+					<a href="#">C: Bewertungen</a>
+				</li>
+				<li>
+					<a href="#">Minigraduiertenkolleg</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--Menu Main body -->
+		<div class="icon-menu">
+			<i class="fa fa-bars"></i>
+			Gruppen Projekte
+
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="appHomepage.js"></script>
+
+		<!-----------------------Inhalt------------------------->
+		
+		<div class="Background">
+			
+			
+			<!--------------Image slider-------------------->
+			 
+			<div id="wrapper">
+
+		<div id="examples_outer">
+			
+
+			<div id="slider_container_1">
+
+				<div id="SliderName">
+
+					<a href="#1">
+						<img src="A01_1.jpg" title="Description from Image Title" />
+						<div class="SliderNameDescription"><strong>Pojekt: A01</strong><br />hah hvd bd yb ydf bdfybyfdb ydbydb </div>
+					</a>
+					<div class="SliderNameDescription">
+						<img src="A01_2.jpg" height="40" style="float:left;margin-right:5px;" />
+						<div class="SliderNameDescription"><strong>Pojekt: A01</strong><br />A01</div>
+					</div>
+					<a href="#2">
+						<img src="A01_3.jpg" />
+						<div class="SliderNameDescription"><strong>Pojekt: A01</strong><br />A01</div>
+					</a>
+					<img src="A01_4.jpg" />
+					<div class="SliderNameDescription"><strong>Pojekt: A01</strong><br />A01</div>
+					<img src="A01_5.jpg" />
+					<div class="SliderNameDescription"><strong>Pojekt: A01</strong><br />A01</div>
+				</div>
+				<div class="c"></div>
+				<div id="SliderNameNavigation"></div>
+				<div class="c"></div>
+
+				<script type="text/javascript">
+
+					
+					Sliderman.effect({name: 'demo01', cols: 40, rows: 0, delay: 5, fade: true, order: 'straight_stairs'});
+
+					var demoSlider = Sliderman.slider({container: 'SliderName', width: 640, height: 428, effects: 'demo01',
+					display: {
+						pause: true, // slider pauses on mouseover
+						autoplay: 3000, // 3 seconds slideshow
+						description: {background: '#ffffff', opacity: .5, height: 50, position: 'bottom'}, // image description box settings
+						buttons: {opacity: 1, prev: {className: 'SliderNamePrev', label: ''}, next: {className: 'SliderNameNext', label: ''}}, // Next/Prev buttons settings
+					}});
+
+				</script>
+
+				<div class="c"></div>
+			</div>
+			<div class="c"></div>
+		</div>
+
+		<div class="c"></div>
+	</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!--------------Bildermenu-------------------->
+
+			<div class="Images">
+
+				<ul>
+
+					<li class="A">
+						<img src="A.jpg">
+						<a href="#">Projekt A</a>
+					</li>
+					<li class="B">
+						<img src="B.jpg">
+						<a href="#">Projekt B</a>
+					</li>
+					<li class="C">
+						<img src="C.jpg">
+						<a href="#">Projekt C</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<!--------------Impressum---------------->
+		<footer>
+			<div class="Impressum">
+
+				<div class="rk">
+					<img src="SFB1070-Logo.png"/>
+				</div>
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>
