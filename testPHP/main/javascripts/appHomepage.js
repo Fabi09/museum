@@ -1,3 +1,11 @@
+function showText(kdata){
+	e = document.getElementById(kdata);
+	if(e.style.display=="block"){
+		e.style.display = "none";
+	} else {
+		e.style.display = "block";
+	}
+}
 
 var main = function() {
 	/* Push the body and the nav over by 285px over */

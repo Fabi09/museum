@@ -1,19 +1,22 @@
 <?php
 
-function RETURN_SUBPROJECT_TEXT($subproject){
-	$spr = $GLOBALS[$_GET['project'].'_'.$_GET['language']];
+function RETURN_SUBPROJECT_TEXT($project, $subproject){
+	# Function to return h1 in subprojects 
+	# (e.g. C04 : Religiöse Ressourcen: Wertschöpfung und Wertkonvertierung ...)
+	$spr = $GLOBALS[$project.'_'.$_GET['language']];
 	return $subproject.'&nbsp&nbsp:&nbsp&nbsp'.$spr[$subproject];
 }
 
 function RETURN_FILE_PATH($path1, $path2, $path3){
-	# Function to concatenate paths (e.g. ../A/A01)
+	# Function to concatenate paths (e.g. ../A/SUBPROJECTS/A01)
+	if (substr($path1, -1) != "/") {
+		$path1 = $path1.'/';
+	}
 	if (!empty ($path2)) {
-		if (substr($path1, -1) == "/") { $path1 = $path1.$path2.'/'; }
-		else { $path1 = $path1.'/'.$path2.'/'; }
+		$path1 = $path1.$path2.'/';
 	}
 	if (!empty ($path3)){
-		if (substr($path1, -1) == "/") { $path1 = $path1.'SUBPROJECTS/'.$path3.'/'; }
-		else { $path1 = $path1.'/'.'SUBPROJECTS/'.$path3.'/'; }
+		$path1 = $path1.'/'.'SUBPROJECTS/'.$path3.'/';
 	}
 	
 	return $path1;
@@ -42,13 +45,13 @@ function ECHO_FLAGS (){
 	# => Function to echo the language flags
 
 	if ($_GET['language'] == DEFAULT_LANGUAGE){
-		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], DEFAULT_LANGUAGE, '', RETURN_TAG_IMG (constant ('IMG_FLAG_'.DEFAULT_LANGUAGE.'_ANIMATED'), constant ('LBL_LANGUAGE_'.DEFAULT_LANGUAGE), '20px'));
-		echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], constant('LANGUAGE_EN'), '', RETURN_TAG_IMG (constant ('IMG_FLAG_'.constant ('LANGUAGE_EN')), constant ('LBL_LANGUAGE_'.constant ('LANGUAGE_'.$_GET['language'])), '20px'));
+		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], DEFAULT_LANGUAGE, '', RETURN_TAG_IMG (constant ('IMG_FLAG_'.DEFAULT_LANGUAGE), constant ('LANGUAGE_'.DEFAULT_LANGUAGE), '15px'));
+		echo '&nbsp;&nbsp;&nbsp;';
+		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], constant('LANGUAGE_EN'), 'flag', RETURN_TAG_IMG (constant ('IMG_FLAG_'.constant ('LANGUAGE_EN')), constant ('LANGUAGE_'.constant ('LANGUAGE_'.$_GET['language'])), '15px'));
 	} else {
-		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], DEFAULT_LANGUAGE, '', RETURN_TAG_IMG (constant ('IMG_FLAG_'.DEFAULT_LANGUAGE), constant ('LBL_LANGUAGE_'.DEFAULT_LANGUAGE), '20px'));
-		echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], constant('LANGUAGE_EN'), '', RETURN_TAG_IMG (constant ('IMG_FLAG_'.constant('LANGUAGE_EN').'_ANIMATED'), constant ('LBL_LANGUAGE_'.constant ('LANGUAGE_'.$_GET['language'])), '20px'));
+		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], DEFAULT_LANGUAGE, 'flag', RETURN_TAG_IMG (constant ('IMG_FLAG_'.DEFAULT_LANGUAGE), constant ('LANGUAGE_'.DEFAULT_LANGUAGE), '15px'));
+		echo '&nbsp;&nbsp;&nbsp;';
+		ECHO_TAG_A ('index.php', $_GET['site'], $_GET['project'], $_GET['subproject'], constant('LANGUAGE_EN'), '', RETURN_TAG_IMG (constant ('IMG_FLAG_'.constant('LANGUAGE_EN')), constant ('LANGUAGE_'.constant ('LANGUAGE_'.$_GET['language'])), '15px'));
 	}
 }
 
@@ -71,165 +74,117 @@ function ECHO_IMAGE_MAP ($file ) {
 }  
 
 function ECHO_IMG_SLIDER($imgDir){
-	/*
-	if (is_dir($imgDir)) {
-	$counter = 0;
-	$imgs = array();
-	
-	while (($f = $imgDir->read()) != false) {
-		if ($f != "." && $f != ".."){
-			// Nur die Bilder auslesen
-			$format = substr ($f, -3);
-			
-			if (strtolower($format) == "jpg" || strtolower($format) == "png" || strtolower($format) == "gif") {//und so weiter
-				if (is_dir("files/".$f)){ // wenn ein Verzeichnis
-	  				// erstmal nichts machen
-	  			} else {
-	  				$imgs[$counter] = $imgDir->path."/".$f;
-					echo "\t<img class=\"img_slider\" src=\"".$imgs[$counter]."\">\n"; //$f."<br /> \n";
-					$counter++;
-				}
-			}
-	  	}
-	}
-	
-	$imgDir->close();
-	 * 
-	$i = 0;
-	while ($i < $counter) {
-		echo "\t<div class=\"slider_col\"><img class=\"slider_hover\" src=\"".$imgs[$i]."\" onclick=\"currentImg(".($i+1).")\" style=\"width: 50px; height:35px\"></div>\n";
-		$i++;
-	}
-	echo "</div>\n";
-	*/
-	
 	if (is_dir($imgDir)) {
 		echo '<style type="text/css">
-		#slider {
-	max-height: 500px;
-	text-align: center;
-}
-
-#main-img
-{ 
-    padding: 5px;
-	max-height: 350px;
-    box-shadow: 0px 5px 15px 5px #333;   
-}
-
-#imageContainer
-{
-    width: 70%;
-    margin: 0px auto 0px auto;
-    position: relative;
-}
-#imageBox {
-    padding: 10px;
-    background-color: rgba(0,0,0,0.75);
-    list-style: none;
-    overflow-y: scroll;
-    height:300px;
-    width:100px;
-}
- 
-#imageBox li {
-    display: inline-block;
-    margin: 0 10px 0 0;
-}
-
-#imageBox img {
-    width: 90px;
-    cursor: pointer;
-    border: 3px solid #eee;
-    max-height:50px;
-}
-
-#imageContainer ::-webkit-scrollbar {
-    height: 0px;
-    width:10px;
-    background-color: #eee;
-    border-radius: 1px;
-}
-
-#imageContainer ::-webkit-scrollbar-thumb {
-	background: #111111;
-	border-radius: 5px;
-}
-
-#imageContainer ::-webkit-scrollbar-thumb:window-inactive {
-    background: #aaa;
-}
-</style>';
-		echo '<div id="slider" style="text-align: center;">
-			<table> <tr><td width="150px">
-	 			<div id="imageContainer">
-					<ul id="imageBox">';
-	
+		.sliderFrame {background-color:#191919;color:#666;line-height:1.4;}
+        .div1 a.current {color:#ccc;}
+        .div1 a,{color:#34739c;}
+        </style>';
+		
+		echo '<div class="sliderFrame">
+        		<div id="slider">';
 		$imgs = scandir($imgDir);
 		$i = 0;
 		
 		foreach ($imgs as $datei) {
 			if ($datei != "." && $datei != ".." && $datei[0] != ".") {
-				echo '<li><img src="'.$imgDir.'/'.$datei.'" onclick="showImg(this)" /></li>';
-			} else { $i++;}	
+				if ($i > 0) {
+					ECHO_TAG_A(RETURN_FILE_PATH($imgDir,'','').$datei,'','','',$_GET['language'], 'lazyImage','');
+				} else {
+					ECHO_TAG_A('','','','',$_GET['language'], '','');
+				}
+				$i++;
+			}
 		};
 		
-		echo '</ul>
-			</div></td><td align="center">
-			<div style="height:350px; width:auto;">
-			<img id="main-img" src="'.$imgDir.'/'.$imgs[$i].'" />
-			</div></td></tr></table>
-		</div>
-		<script type="text/javascript">
-			function showImg(s){
-				document.getElementById("main-img").src = s.src;
+		echo '</div>        
+        <!--thumbnails-->
+        <div id="thumbs">';
+		
+		$i = 0;
+		
+		foreach ($imgs as $datei) {
+			if ($datei != "." && $datei != ".." && $datei[0] != ".") {
+				echo '<div class="thumb">';
+				ECHO_TAG_IMG(RETURN_FILE_PATH($imgDir,'','').$datei, '', '140', '60');
+				echo '</div>';
+				$i++;
 			}
-		</script> <br />';
+		};
+		
+		echo '</div>
+    	</div>';
 	}
 }
 
 #-----------CSV functions
 
 function ECHO_CSV_DIVS ($url, $file, $project) {
-	 # Function to return csv content as div
-	if (file_exists($url.$file)){
-		$row = 0;
-		$i = 0;
-	 	if ($_GET['project'] == 'C') { $i++;}
-	 	
-	 	if (($handle = fopen($url.$file, "r")) !== FALSE) {
-	 		while (($data = fgetcsv($handle, 100, "\t")) !== FALSE) {
-				if ($row > 0) {
-					echo '<div class="read_more_box""><h2>'.RETURN_SUBPROJECT_TEXT($_GET['project'].'0'.$i).'</h2>';
-					if (!empty ($data[0])){
-						ECHO_TAG_IMG ($url.'images/'.$data[0], 'img_left');
-					} 
-					if (!empty ($data[1])){
-						echo ECHO_TAG_TEXT($url, $data[1]).'<br />';
-					}
-					ECHO_TAG_A ('', '', $project, $_GET['project'].'0'.$i, $_GET['language'], 'read_more_btn', 'Mehr lesen');
-					echo '<br /></div>';
-				}
-				$row++;
-				$i++;
-			}
-	 	}
-	 	fclose($handle);
-	} else {
-		if ($_GET['language'] == 'DE') { echo 'Inhalt in Bearbeitung ...';}
-		else { echo 'Content in Processing ...';}
-	}
+	 # Function to return csv content for project
+	 $div = RETURN_CSV_FILE($url, $file);
+	 $num = count($div);
+	 
+	 for ($i=0; $i < $num; $i++) {
+	 	if(array_key_exists($_GET['project'].'0'.($i+1), $GLOBALS[$_GET['project'].'_'.$_GET['language']])){
+	 		echo '<div class="read_more_box""><h2>'.RETURN_SUBPROJECT_TEXT($_GET['project'],$_GET['project'].'0'.($i+1)).'</h2>';
+	 		if (!empty ($div[$i][0])){
+		 		ECHO_TAG_IMG ($url.'images/'.$div[$i][0], 'img_left');
+		 	}
+		 	if (!empty ($div[$i][1])){
+		 		echo ECHO_TAG_TEXT($url, $div[$i][1]).'<br />';
+		 	}
+		 	ECHO_TAG_A ('', '', $project, $_GET['project'].'0'.($i+1), $_GET['language'], 'read_more_btn', 'Mehr lesen');
+		 	echo '<br /></div>';
+		 }
+	 }
 }
 
 function RETURN_CSV_FILE ($path, $file){
 	$csv = array();
-	$fp = fopen($path.$file, "r");
 	
-	while ( ($result = fgetcsv($file, 100, "\t")) !== false){
-		$csv[] = $result;
+	# check path
+	if (substr($path, -1) != "/") { $f = $path.'/'.$file; }
+	else { $f = $path.$file; }
+	
+	if (file_exists($f)){
+		
+		$row = 0;
+		$i = 0;
+		
+		$delimeter = getFileDelimiter($f);
+	
+		if (($handle = fopen($f, "r")) !== FALSE) {
+			if (strlen($delimeter) < 2){
+			while (($data = fgetcsv($handle, 100, $delimeter)) !== FALSE) {
+				if ($row > 0){
+					#print_r($data);
+					$csv[$i] = $data;
+					$i++;
+				}
+				
+				
+				$row++;
+			}	
+			} else {
+			# wollte nicht string mit 2 Zeichen als variable akzeptieren
+			while (($data = fgetcsv($handle, 100, "\t")) !== FALSE) {
+				if ($row > 0){
+					#print_r($data);
+					$csv[$i] = $data;
+					$i++;
+				}
+				
+				
+				$row++;
+			}		
+			}
+			
+		}
+		
+		fclose($handle);
+	} else {
+		echo "$file existiert nicht in dem Dateiordner $path";
 	}
-	
-	fclose($file);
 	
 	return $csv;
 }
@@ -289,8 +244,12 @@ function ECHO_CSV_FILE ($site, $project, $subproject, $file) {
 						 	echo '<br /><iframe width="420" height="315" src="'.$data[1].'"></iframe>';
 							break;
 						case 'slider':
-							echo 'Image slider <br />';
-						 	ECHO_IMG_SLIDER( $f.'images/'.$data[1]);
+							echo 'Image slider test <br />';
+							if ($data[1] != 'images') {
+								ECHO_IMG_SLIDER( $f.'images/'.$data[1]);
+							} else {
+								ECHO_IMG_SLIDER( $f.'images');
+							}
 							break;
 					 	default:
 						 	echo '';
@@ -405,4 +364,34 @@ function DELETE_CSV_ROWELEMENT ($file, $elem) {
 	}
 }
 
+
+
+function getFileDelimiter($file, $checkLines = 2){
+	# Function to find out csv file delimeter
+	$file = new SplFileObject($file);
+	$delimiters = array(',','\t',';','|',':', '~');
+	
+	$results = array();
+	$i = 0;
+	
+	while($file->valid() && $i <= $checkLines){
+		$line = $file->fgets();
+		foreach ($delimiters as $delimiter){
+			$regExp = '/['.$delimiter.']/';
+			$fields = preg_split($regExp, $line);
+			
+			if(count($fields) > 1){
+				if(!empty($results[$delimiter])){
+					$results[$delimiter]++;
+				} else {
+					$results[$delimiter] = 1;
+				}
+			}
+		}
+		$i++;
+	}
+	
+	$results = array_keys($results, max($results));
+	return $results[0];
+}
 ?>

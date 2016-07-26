@@ -61,16 +61,18 @@ function ECHO_TAG_A ($href, $href_site, $href_project, $href_subproject, $href_l
 
 	echo '<a href="';
 	echo $href;
-	echo '?';
+	
 	# Add parameters
-	if (!empty ($href_site))
-	{
-		echo 'site=';
+	if (!empty ($href_site)) {
+		echo '?site=';
 		echo $href_site;
 	}
-	if (!empty ($href_project))
-	{
-		echo '&amp;project=';
+	if (!empty ($href_project)) {
+		if (empty($href_site)) {
+			echo '?project=';
+		} else {
+			echo '&amp;project=';
+		}	
 		echo $href_project;
 	}
 	if (!empty ($href_subproject))

@@ -2,12 +2,17 @@
 require_once ('main/config.php');				# Paths
 require_once (DIR_PHP.'php__HTMLELEMENTS.php'); # PHP-functions to echo HTML-tags
 require_once (DIR_PHP.'php__BASIC.php');        # PHP-functions
-require_once (DIR_LABELS.'lbl__BASIC.php');     # PHP-Constants
+require_once (DIR_CONSTANTS.'constants.php');     # PHP-Constants
 
 INITIALIZE_GET_VAR ('site',			'');
 INITIALIZE_GET_VAR ('project',		'');
 INITIALIZE_GET_VAR ('subproject',	'');
 INITIALIZE_GET_VAR ('language',		DEFAULT_LANGUAGE);
+
+#INITIALIZE_POST_VAR ('site',			'');
+#INITIALIZE_POST_VAR ('project',		'');
+#INITIALIZE_POST_VAR ('subproject',	'');
+#INITIALIZE_POST_VAR ('language',		DEFAULT_LANGUAGE);
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -15,13 +20,18 @@ INITIALIZE_GET_VAR ('language',		DEFAULT_LANGUAGE);
     	<title>
     	<?php
     		if (!empty ($_GET['project'])){
-				echo constant('LBL_PROJECT_'.strtoupper($_GET['project']).'_'.$_GET['language']);
+				echo constant('PROJECT_'.strtoupper($_GET['project']).'_'.$_GET['language']);
 			} else {
-				echo constant('LBL_SITE_'.strtoupper($_GET['site']).'_'.$_GET['language']);
+				echo constant('SITE_'.strtoupper($_GET['site']).'_'.$_GET['language']);
 			}
 		?></title>
   
     	<meta charset="UTF-8"/>
+    	
+    	<!-- Image Slider links -->
+    	<link href="main/stylesheets/js-image-slider.css" rel="stylesheet" type="text/css" />
+    	<script src="main/javascripts/js-image-slider.js" type="text/javascript"></script>
+    	
     	<link href="<?php echo DIR_STYLESHEETS.'style.css'; ?>" rel="stylesheet" type="text/css">
     	<?php 
     	if (!empty($_GET['site']) && file_exists(DIR_STYLESHEETS.strtoupper($_GET['site']).'.css') && $_GET['site'] != 'Home') {
@@ -47,7 +57,7 @@ INITIALIZE_GET_VAR ('language',		DEFAULT_LANGUAGE);
     		}
 		 */
     	?>
-    	<script type="text/javascript" src="<?php echo DIR_JAVASCRIPTS.'HomePageSlider.js'; ?>"></script>
+    	<script type="text/javascript" src="<?php echo DIR_JAVASCRIPTS.'HOME.js'; ?>"></script>
   	</head>
   	<body>
   		<noscript>
@@ -58,19 +68,19 @@ INITIALIZE_GET_VAR ('language',		DEFAULT_LANGUAGE);
 	    
 	    <div class="Background">
 	    <?php
-	 		require_once(DIR_TEMPLATES.'tpl__HEADER.php');
+	 		require_once(DIR_TEMPLATES.'tpl__HEADER2.php');
 	 		
 	 		if ($_GET['site'] != 'Map') echo '<div style="padding-left: 6%; padding-right:6%;">';
 			if (!empty ($_GET['project'])){
 				if (!empty ($_GET['subproject'])) {
-					require_once(DIR_TEMPLATES.'tpl_SUBPROJECT.php');
+					require_once(DIR_TEMPLATES.'subproject.php');
 				} else {
-					require_once(DIR_TEMPLATES.'tpl_PROJECT.php');
+					require_once(DIR_TEMPLATES.'project.php');
 				}
 			} else if (!empty ($_GET['site'])){
-				require_once (DIR_TEMPLATES.'tpl_'.strtoupper($_GET['site']).'.php');
+				require_once (DIR_TEMPLATES.constant('TPL_'.$_GET['site']));
 			} else {
-				require_once (DIR_TEMPLATES.'tpl_HOME.php');
+				require_once (DIR_TEMPLATES.'home.php');
 			}
 			if ($_GET['site'] != 'Map') echo '</div>';
 		?>

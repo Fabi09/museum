@@ -1,0 +1,7 @@
+DEUTSCH	ENGLISH	TEMPLATE
+Startseite	Home	home.php
+Teilprojekte	Projects	projectlist.php
+Geschichte	History	history.php
+Publikationen	Publications	publications.php
+Termine	Appointment	appointments.php
+Karte	Map	map.php

@@ -9,26 +9,34 @@ define ('DEFAULT_LANGUAGE', 'DE');
 define ('LANGUAGE_DE', 'DE');
 define ('LANGUAGE_EN', 'EN');
 
+# Search
+define ('SEARCH_EN', 'Search');
+define ('SEARCH_DE', 'Suche');
+
+
+# Title
+define ('TITLE_DE', 'SFB 1070 RessourcenKulturen');
+define ('TITLE_EN', 'SFB 1070 ResourceCultures');
+
 
 # Directories
 define ('DIR_PROJECTS',    		'PROJECTS/');
 define ('DIR_IMAGES',      		'main/images/');
 define ('DIR_IMAGE_SLIDER',		'main/images/slider/');
 define ('DIR_JAVASCRIPTS', 		'main/javascripts/');
-define ('DIR_LABELS',      		'main/labels/');
+define ('DIR_CONSTANTS',      	'main/constants/');
 define ('DIR_PHP',         		'main/php/');
 define ('DIR_STYLESHEETS', 		'main/stylesheets/');
 define ('DIR_TEMPLATES',   		'main/templates/');
+define ('DIR_CSV',   			'main/csv/');
 
 
 # Images
 define ('LOGO_UNI',				DIR_IMAGES.'Logo-uni-tuebingen.png');
 define ('LOGO_RK',				DIR_IMAGES.'SFB1070-Logo.png');
 define ('IMG_GLOBE',			DIR_IMAGES.'globe-green.png');
-define ('IMG_FLAG_DE',          DIR_IMAGES.'FLAG_DE.gif');
-define ('IMG_FLAG_DE_ANIMATED', DIR_IMAGES.'FLAG_DE_ANIMATED.gif');
-define ('IMG_FLAG_EN',          DIR_IMAGES.'FLAG_EN.gif');
-define ('IMG_FLAG_EN_ANIMATED', DIR_IMAGES.'FLAG_EN_ANIMATED.gif');
+define ('IMG_FLAG_DE',          DIR_IMAGES.'de.gif');
+define ('IMG_FLAG_EN',          DIR_IMAGES.'en.gif');
 
 # Projects
 

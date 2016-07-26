@@ -259,4 +259,5 @@ video {
 	width: 640px;
 }
 
-#flag { float:right; height: 50px; padding-right:5px;}
+#flag { float:right; height: 40px; padding-right:5px;}
+.flag { opacity: 0.45;}
