@@ -1,3 +1,0 @@
-<div>
-<iframe  width="460" height="315" src="https://www.youtube.com/embed/FR3Zhw8KqT0?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
