@@ -1,10 +1,10 @@
 body {
-	text-align: center;
+	color: #681;
 	background: rgb(130,185,160);
 	min-width: 700px;
-	max-width: 1300px;
-	text-align: left;
-	background-image: url(images/background2.png);
+	width: 1200px;
+	text-align:left;  
+  margin: 0 auto;
 }
 
 #page {
@@ -34,7 +34,7 @@ body {
 
 /* navigation bar */
 nav {
-	width: 1260px;
+	width: 1161px;
 	margin: 0px;
 	text-align: left;
 }
@@ -224,8 +224,7 @@ h2 {
 	color: #333;
 }
 .Background {
-
-	padding-left: 100px;
+	padding-left:100px;
 	padding-right: 80px;
 	margin: 0px;
 	background-color: white;
@@ -241,17 +240,20 @@ h2 {
 /* ---------------Images------------------ */
 
 .Images {
-	margin-bottom: 50px;
-	margin-top: 30px;
-	width: 330px;
-	position: relative;
-	float: left;
-	bottom: 0px;
-	margin-right: 55px;
+	margin-bottom: 5em;
+	margin-top: 1em;
+    width: 25em;
+    position: relative;
+	float:left;
+	bottom:0em;
+	margin-right: 2em;
+	margin-left: 3.5em;
+	
 }
 .Images spanA {
-	background-color: rgb(180,160,150);
-	background-color: rgba(180,160,150,0.8);
+	background-color: rgb(125,165,75);
+	background-color: rgba(125,165,75,0.8);
+	
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -259,9 +261,10 @@ h2 {
 	text-align: center;
 	text-decoration: none;
 	color: white;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: bold;
 	font-family: Open Sans;
+	
 }
 .Images spanB {
 	background-color: rgb(215,180,105);
@@ -273,25 +276,11 @@ h2 {
 	text-align: center;
 	text-decoration: none;
 	color: white;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: bold;
 	font-family: Open Sans;
 }
 .Images spanC {
-	background-color: rgb(125,165,75);
-	background-color: rgba(125,165,75,0.8);
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	line-height: 5em;
-	text-align: center;
-	text-decoration: none;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	font-family: Open Sans;
-}
-.Images Minigrad {
 	background-color: rgb(255,255,115);
 	background-color: rgba(255,255,115,0.8);
 	position: absolute;
@@ -301,7 +290,22 @@ h2 {
 	text-align: center;
 	text-decoration: none;
 	color: white;
-	font-size: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Open Sans;
+}
+.Images Minigrad {
+	background-color: rgb(180,160,150);
+	background-color: rgba(180,160,150,0.8);
+	
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	line-height: 5em;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
 	font-weight: bold;
 	font-family: Open Sans;
 }
@@ -310,5 +314,16 @@ h2 {
 	display: block;
 }
 
+/* ---------------Sketchfab------------------ */
 
+.sketchfab-embed-wrapper{
+float: left;
+	padding-top: 4em;
+	padding-right: 3em;
+	
+}
+/* ---------------Timeline------------------ */
 
+.timeline {
+	width: 500px;
+}
