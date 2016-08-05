@@ -19,7 +19,7 @@ if( is_writeable( $php_const ) && is_writeable($php_nav)){
 	   file_put_contents($php_nav, "<nav>\n<ul>\n", FILE_APPEND | LOCK_EX);
 	   
 	   # csv files
-	   $file_nav		= 'navigation.csv';
+	   $file_nav		= 'navigation_alt.csv';
 	   $file_projects	= 'projects.csv';
 	   $file_a			= 'A.csv';
 	   $file_b			= 'B.csv';
@@ -46,8 +46,9 @@ if( is_writeable( $php_const ) && is_writeable($php_nav)){
 	   file_put_contents($php_const, "# Navigation\n", FILE_APPEND | LOCK_EX);
 	   for ($i=0; $i < $len_nav; $i++){
 	   		#echo substr($nav[$i][2],0, -4)."\t".$nav[$i][2]."\n\n";
+		   $site = strtoupper(str_replace(" ", "", $nav[$i][1]));
 		   if (substr($nav[$i][2], 0, -4) == 'projectlist'){
-			   file_put_contents($php_nav, "<li><?php ECHO_TAG_A('index.php','".($i+1)."','','',\$_GET['language'],'', constant ('SITE_".($i+1)."_'.\$_GET['language'])) ?>\n", FILE_APPEND | LOCK_EX);
+			   file_put_contents($php_nav, "<li><?php ECHO_TAG_A('index.php','".$site."','','',\$_GET['language'],'', constant ('SITE_".$site."_'.\$_GET['language'])) ?>\n", FILE_APPEND | LOCK_EX);
 			   
 			   # genetare Project- and Subproject-list
 			   file_put_contents($php_nav, "<ul>\n", FILE_APPEND | LOCK_EX);
@@ -85,15 +86,31 @@ if( is_writeable( $php_const ) && is_writeable($php_nav)){
 			   
 			   file_put_contents($php_nav, "</ul>\n", FILE_APPEND | LOCK_EX);
 		   } else if (substr($nav[$i][2], 0, -4) == 'map') {
-		   	file_put_contents($php_nav, '<div class="globus">'."\n", FILE_APPEND | LOCK_EX);
-		   	file_put_contents($php_nav, "<li><?php ECHO_TAG_A('index.php','".($i+1)."','','',\$_GET['language'],'', RETURN_TAG_IMG (IMG_GLOBE, 'Image Map', 40)) ?> </li>\n", FILE_APPEND | LOCK_EX);
-			file_put_contents($php_nav, '<div>'."\n", FILE_APPEND | LOCK_EX);
+		   		file_put_contents($php_nav, '<div class="globus">'."\n", FILE_APPEND | LOCK_EX);
+		   		file_put_contents($php_nav, "<li><?php ECHO_TAG_A('index.php','".$site."','','',\$_GET['language'],'', RETURN_TAG_IMG (IMG_GLOBE, 'Image Map', 40)) ?> </li>\n", FILE_APPEND | LOCK_EX);
+				file_put_contents($php_nav, '<div>'."\n", FILE_APPEND | LOCK_EX);
 		   } else {
-		   	file_put_contents($php_nav, "<li><?php ECHO_TAG_A('index.php','".($i+1)."','','',\$_GET['language'],'', constant ('SITE_".($i+1)."_'.\$_GET['language'])) ?> </li>\n", FILE_APPEND | LOCK_EX);
+		   		file_put_contents($php_nav, "<li><?php ECHO_TAG_A('index.php','".$site."','','',\$_GET['language'],'', constant ('SITE_".$site."_'.\$_GET['language'])) ?> </li>\n", FILE_APPEND | LOCK_EX);
 		   }
-		   file_put_contents($php_const, "define('SITE_".($i+1)."_DE','".$nav[$i][0]."');\n", FILE_APPEND | LOCK_EX);
-		   file_put_contents($php_const, "define('SITE_".($i+1)."_EN','".$nav[$i][1]."');\n", FILE_APPEND | LOCK_EX);
-		   file_put_contents($php_const, "define('TPL_".($i+1)."','".$nav[$i][2]."');\n\n", FILE_APPEND | LOCK_EX);
+		   
+		   # pages
+		   file_put_contents($php_const, "define('SITE_".$site."_DE','".$nav[$i][0]."');\n", FILE_APPEND | LOCK_EX);
+		   file_put_contents($php_const, "define('SITE_".$site."_EN','".$nav[$i][1]."');\n", FILE_APPEND | LOCK_EX);
+		   if (empty($nav[$i][2])){
+		   		if (!file_exists(DIR_TEMPLATES."$site.php")){
+		   			@copy(DIR_TEMPLATES.'default_site.php', DIR_TEMPLATES.strtolower($site).".php");
+		   		}
+		   		file_put_contents($php_const, "define('TPL_".$site."','".strtolower($site).".php');\n", FILE_APPEND | LOCK_EX);
+		   		#$datei = fopen(DIR_CONSTANTS.str_replace(" ", "", "bla blu bla.php"),"w");
+		   		#fwrite($datei, "Hallo Welt",100);
+		   		#fclose($datei);	
+		   } else {
+		   		file_put_contents($php_const, "define('TPL_".$site."','".$nav[$i][2]."');\n", FILE_APPEND | LOCK_EX);
+		   }
+		   if (!empty($nav[$i][3])) {
+		   		file_put_contents($php_const, "define('CSV_".$site."','".$nav[$i][3]."');\n", FILE_APPEND | LOCK_EX);
+		   }
+		   file_put_contents($php_const, "\n", FILE_APPEND | LOCK_EX);
 	   }
 	   #file_put_contents($php_const, "define('SITE_MAP_DE','Karte');\n", FILE_APPEND | LOCK_EX);
 	   #file_put_contents($php_const, "define('SITE_MAP_EN','Map');\n", FILE_APPEND | LOCK_EX);
@@ -206,14 +223,14 @@ if( is_writeable( $php_const ) && is_writeable($php_nav)){
 	   fclose( $handle2 );
 	   
 	   
-	   echo "Done!    Bitte pruefen Sie die Inhalt der file    '$php_const'    und    '$php_nav'    nach Korrektheit!";
+	   echo "Done!<br />Bitte pruefen Sie die Inhalt der file <br />*<b>$php_const</b>  und <br />*<b>$php_nav</b> <br />nach Korrektheit!";
    		}
 	}
-	
+
 } else {
-	echo "Sie haben keine Schreibrechte auf Dateien im ".DIR_CSV;
-	echo ".\nBitte Aendern Sie es wie im Doku beschrieben und gehen sicher, dass die Dateien ";
-	echo $php_const." und ".$php_nav." unter dem Ordner ".DIR_CSV." liegen!";
+	echo "Sie haben entweder keine Schreibrechte auf Dateien im <b>".DIR_CSV;
+	echo "</b>.\n<br />Oder die Datei <br />* <b>";
+	echo $php_const."</b> bzw. <br />* <b>".$php_nav."</b><br />liegt nicht im Ordner ".DIR_CSV."!";
 }
 
 ?>

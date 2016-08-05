@@ -1,7 +1,7 @@
 <nav>
 <ul>
-<li><?php ECHO_TAG_A('index.php','1','','',$_GET['language'],'', constant ('SITE_1_'.$_GET['language'])) ?> </li>
-<li><?php ECHO_TAG_A('index.php','2','','',$_GET['language'],'', constant ('SITE_2_'.$_GET['language'])) ?>
+<li><?php ECHO_TAG_A('index.php','HOME','','',$_GET['language'],'', constant ('SITE_HOME_'.$_GET['language'])) ?> </li>
+<li><?php ECHO_TAG_A('index.php','PROJECTS','','',$_GET['language'],'', constant ('SITE_PROJECTS_'.$_GET['language'])) ?>
 <ul>
 <li> <?php ECHO_TAG_A('index.php','','A','',$_GET['language'],'', constant ('PROJECT_A_'.$_GET['language'])) ?>
 <ul>
@@ -37,12 +37,12 @@
 <li> <?php ECHO_TAG_A('index.php','','M','',$_GET['language'],'', constant ('PROJECT_M_'.$_GET['language'])) ?>
 </li>
 </ul>
-<li><?php ECHO_TAG_A('index.php','3','','',$_GET['language'],'', constant ('SITE_3_'.$_GET['language'])) ?> </li>
-<li><?php ECHO_TAG_A('index.php','4','','',$_GET['language'],'', constant ('SITE_4_'.$_GET['language'])) ?> </li>
-<li><?php ECHO_TAG_A('index.php','5','','',$_GET['language'],'', constant ('SITE_5_'.$_GET['language'])) ?> </li>
-<li><?php ECHO_TAG_A('index.php','6','','',$_GET['language'],'', constant ('SITE_6_'.$_GET['language'])) ?> </li>
+<li><?php ECHO_TAG_A('index.php','HISTORY','','',$_GET['language'],'', constant ('SITE_HISTORY_'.$_GET['language'])) ?> </li>
+<li><?php ECHO_TAG_A('index.php','BLUBLU','','',$_GET['language'],'', constant ('SITE_BLUBLU_'.$_GET['language'])) ?> </li>
+<li><?php ECHO_TAG_A('index.php','PUBLICATIONS','','',$_GET['language'],'', constant ('SITE_PUBLICATIONS_'.$_GET['language'])) ?> </li>
+<li><?php ECHO_TAG_A('index.php','APPOINTMENT','','',$_GET['language'],'', constant ('SITE_APPOINTMENT_'.$_GET['language'])) ?> </li>
 <div class="globus">
-<li><?php ECHO_TAG_A('index.php','7','','',$_GET['language'],'', RETURN_TAG_IMG (IMG_GLOBE, 'Image Map', 40)) ?> </li>
+<li><?php ECHO_TAG_A('index.php','MAP','','',$_GET['language'],'', RETURN_TAG_IMG (IMG_GLOBE, 'Image Map', 40)) ?> </li>
 <div>
 
 </ul>

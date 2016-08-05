@@ -1,32 +1,33 @@
 <?php 
 # Navigation
-define('SITE_1_DE','Home');
-define('SITE_1_EN','Home');
-define('TPL_1','home.php');
+define('SITE_HOME_DE','Startseite');
+define('SITE_HOME_EN','Home');
+define('TPL_HOME','home.php');
 
-define('SITE_2_DE','Teilprojekte');
-define('SITE_2_EN','Projects');
-define('TPL_2','projectlist.php');
+define('SITE_PROJECTS_DE','Teilprojekte');
+define('SITE_PROJECTS_EN','Projects');
+define('TPL_PROJECTS','projectlist.php');
 
-define('SITE_3_DE','Geschichte');
-define('SITE_3_EN','History');
-define('TPL_3','history.php');
+define('SITE_HISTORY_DE','Geschichte');
+define('SITE_HISTORY_EN','History');
+define('TPL_HISTORY','history.php');
 
-define('SITE_4_DE','Publikationen');
-define('SITE_4_EN','Publications');
-define('TPL_4','publications.php');
+define('SITE_BLUBLU_DE','Bla Bla');
+define('SITE_BLUBLU_EN','Blu blu');
+define('TPL_BLUBLU','blublu.php');
+define('CSV_BLUBLU','blublu.csv');
 
-define('SITE_5_DE','Bla bla');
-define('SITE_5_EN','Blu blu');
-define('TPL_5','blabla.php');
+define('SITE_PUBLICATIONS_DE','Publikationen');
+define('SITE_PUBLICATIONS_EN','Publications');
+define('TPL_PUBLICATIONS','publications.php');
 
-define('SITE_6_DE','Termine');
-define('SITE_6_EN','Appointment');
-define('TPL_6','appointments.php');
+define('SITE_APPOINTMENT_DE','Termine');
+define('SITE_APPOINTMENT_EN','Appointment');
+define('TPL_APPOINTMENT','appointments.php');
 
-define('SITE_7_DE','Karte');
-define('SITE_7_EN','Map');
-define('TPL_7','map.php');
+define('SITE_MAP_DE','Karte');
+define('SITE_MAP_EN','Map');
+define('TPL_MAP','map.php');
 
 
 
