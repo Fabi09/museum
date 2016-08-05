@@ -19,7 +19,7 @@ if( is_writeable( $php_const ) && is_writeable($php_nav)){
 	   file_put_contents($php_nav, "<nav>\n<ul>\n", FILE_APPEND | LOCK_EX);
 	   
 	   # csv files
-	   $file_nav		= 'navigation_alt.csv';
+	   $file_nav		= 'navigation.csv';
 	   $file_projects	= 'projects.csv';
 	   $file_a			= 'A.csv';
 	   $file_b			= 'B.csv';
