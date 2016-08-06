@@ -127,4 +127,39 @@ function RETURN_CSVFILE_CONTENT ($file)
 	return $return_array;
 }
 
+function RETURN_CSV_FILE ($path, $file){
+	$csv = array();
+
+	# check path
+	if (substr($path, -1) != "/") { $f = $path.'/'.$file; }
+	else { $f = $path.$file; }
+
+	if (file_exists($f)){
+
+		$row = 0;
+		$i = 0;
+
+
+		if (($handle = fopen($f, "r")) !== FALSE) {
+			while (($data = fgetcsv($handle, 100, ";")) !== FALSE) {
+				if ($row > 0){
+					#print_r($data);
+					$csv[$i] = $data;
+					$i++;
+				}
+
+
+				$row++;
+			}
+
+		}
+
+		fclose($handle);
+	} else {
+		echo "$file existiert nicht in dem Dateiordner $path";
+	}
+
+	return $csv;
+}
+
  ?>
