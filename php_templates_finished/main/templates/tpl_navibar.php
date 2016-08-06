@@ -52,7 +52,7 @@
 
 			<li><?php ECHO_TAG_A('index.php',constant('SITE_PUBLICATIONS_EN'),'',$_GET['language'],'', constant ('SITE_PUBLICATIONS_'.$_GET['language'])) ?></li>
 
-			<li><?php ECHO_TAG_A('index.php',constant('SITE_GALLERY_EN'),'',$_GET['language'],'', constant ('SITE_GALLERY_'.$_GET['language'])) ?></li>
+			<li><?php ECHO_TAG_A('index.php',constant('SITE_DATE_EN'),'',$_GET['language'],'', constant ('SITE_DATE_'.$_GET['language'])) ?></li>
 
 			<div class="globus">
 				<a>Hier klicken um die Weltkarte zu sehen</a>
