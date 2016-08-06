@@ -1,5 +1,5 @@
 <?php
-require_once ('main/config.php');				# Config-file
+require_once ('main/config.php');	        # Config-file
 require_once ('main/php/functions.php');        # PHP-functions
 
 init_get ('site',			'');
@@ -9,6 +9,8 @@ init_get ('language',		DEFAULT_LANGUAGE);
 ?>
 <!DOCTYPE html>
 <html lang="de">
+	
+	<!------------Head---------------------->
 	<head>
 		<title><?php echo 'Ressourcen Kulturen:'.$_GET['site'] ?></title>
 
@@ -19,7 +21,7 @@ init_get ('language',		DEFAULT_LANGUAGE);
 	<!------------Body---------------------->
 	<body>
 
-		<!------------banner---------------------->
+		<!------------Banner---------------------->
 		<div class="banner">
 			<!--Deutsch/Englisch-->
 			<div class="flag" align="right"  >
@@ -28,10 +30,12 @@ init_get ('language',		DEFAULT_LANGUAGE);
 			<img src="main/images/Logo-uni-tuebingen.png" >
 
 		</div>
-
+                
+                <!------------Navibar---------------------->
 		<?php
 		require_once('main/templates/tpl_navibar.php'); ?>
-
+                
+                <!------------Zahlenstrahl---------------------->
 		<div class="timeline">
 
 			<img src="main/images/Zeitstrahl.jpg"  usemap="#timetable" alt="timetable" />
@@ -57,7 +61,7 @@ init_get ('language',		DEFAULT_LANGUAGE);
 			</map>
 
 		</div>
-
+                <!------------Background---------------------->
 		<div class="Background">
 
 			<?php
