@@ -49,8 +49,8 @@ define ('SITE_HISTORY_EN', 'History');
 define ('SITE_PUBLICATIONS_DE', 'Publikationen');
 define ('SITE_PUBLICATIONS_EN', 'Publications');
 
-define ('SITE_GALLERY_DE', 'Galerie');
-define ('SITE_GALLERY_EN', 'Gallery');
+define ('SITE_DATE_DE', 'Termine');
+define ('SITE_DATE_EN', 'Date');
 
 define ('SITE_GLOBE_DE', 'Karte');
 define ('SITE_GLOBE_EN', 'Map');
