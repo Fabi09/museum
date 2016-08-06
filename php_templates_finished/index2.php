@@ -37,31 +37,7 @@ init_get ('language',		DEFAULT_LANGUAGE);
 <!---------Background------------------>
 	<div class="Background">
 		
-		
-			<!--------------Image slider-------------------->
-			 <div id="slider" style="text-align: center;">
-	 		<div id="imageContainer">
-				<ul id="imageBox">
-					<li><img src="main/images/A01.jpg" onclick="showImg(this)" /></li>
-					<li><img src="main/images/A02.jpg" onclick="showImg(this)" /></li>
-					<li><img src="main/images/A03.jpg" onclick="showImg(this)" /></li>
-					<li><img src="main/images/A04.jpg" onclick="showImg(this)" /></li>
-					<li><img src="main/images/A05.jpg" onclick="showImg(this)" /></li>
-					<li><img src="main/images/A06.jpg" onclick="showImg(this)" /></li>
-
-				</ul>
-			</div>
-			<img id="main-img" src="main/images/A01.jpg" />
-		</div>
-		<script type="text/javascript">
-			function showImg(s){
-				document.getElementById("main-img").src = s.src;
-			}
-		</script>
-		
-		
-		
-		
+	
 		
 
 <div class="Text">
