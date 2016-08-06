@@ -55,6 +55,7 @@
 			<li><?php ECHO_TAG_A('index.php',constant('SITE_GALLERY_EN'),'',$_GET['language'],'', constant ('SITE_GALLERY_'.$_GET['language'])) ?></li>
 
 			<div class="globus">
+				<a>Hier klicken um die Weltkarte zu sehen</a>
 				<?php ECHO_TAG_A('index.php',constant('SITE_GLOBE_EN'),'',$_GET['language'],'', RETURN_TAG_IMG (IMG_GLOBE, 'Image Map', 40)) ?>
 			</div>
 		</ul>
