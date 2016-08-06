@@ -71,13 +71,14 @@ init_get ('language',		DEFAULT_LANGUAGE);
 								echo '
 								<li><img src="main/data/'.$_GET['projekt'].'/bilder/'.$array['bild'].'" onclick="showImg(this)" />
 								</li>';
+								$main_bild = $array['bild'];
 
 								}
 								}
 								?>
 							</ul>
 						</div>
-						<img id="main-img" src="main/images/A01.jpg" />
+						<img id="main-img" src="main/<?php echo 'data/'.$_GET['projekt'].'/bilder/'.$main_bild; ?>" />
 					</div>
 					
 					<!--------------Image slider-------------------->
