@@ -25,6 +25,21 @@ if(!empty($array['tag'])){
 EOT;
 }
 }
+
+$news = (RETURN_CSV_FILE($directory, 'newsfeed_'.$_GET['language'].'.csv' )) ;
+for($i=0;$i<4;$i++){
+  for($j=0;$j<4;$j++){
+    echo '<div class="news green">';
+    echo '<ul>';
+    echo '<li><a href="#">';echo $news[0][0];echo '-'; echo $news[0][1]; echo '-'; echo $news[0][2]; echo':'; echo $news[0][3];echo '</a></li>';
+    echo '<li><a href="#">';echo $news[1][0];echo '-'; echo $news[1][1]; echo '-'; echo $news[1][2]; echo':'; echo $news[1][3];echo '</a></li>';
+    echo '<li><a href="#">';echo $news[2][0];echo '-'; echo $news[2][1]; echo '-'; echo $news[2][2]; echo':'; echo $news[2][3];echo '</a></li>';
+    echo '<li><a href="#">';echo $news[3][0];echo '-'; echo $news[3][1]; echo '-'; echo $news[3][2]; echo':'; echo $news[3][3];echo '</a></li>';
+    echo '</ul>';
+    echo '</div>';
+  }
+}
+
 ?>
 </div>
 
