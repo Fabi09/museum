@@ -1,24 +1,24 @@
 body {
 
-	color: black;
-	background: rgb(130,185,160);
+color: black;
+background: rgb(130,185,160);
 
 }
 
 /* ----------------Banner----------------- */
 .banner {
-	text-align: left;
-	border-style: groove;
-	border-color: rgb(130,185,160);
-	border-left-width: 2px;
-	border-right-width: 2px;
-	background-color: white;
-	border-bottom: 5px;
-	margin-bottom:5px;
+text-align: left;
+border-style: groove;
+border-color: rgb(130,185,160);
+border-left-width: 2px;
+border-right-width: 2px;
+background-color: white;
+border-bottom: 5px;
+margin-bottom:5px;
 
-	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
-	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
 }
 .flag {
 margin-top: 5px;
@@ -28,99 +28,94 @@ margin-right: 5px;
 
 /* navigation bar */
 nav{
-  padding-right: 40px;
-  border-left-width: 2px;
-	border-right-width: 2px;
-	margin:0px;
-	text-align: left;
+padding-right: 40px;
+border-left-width: 2px;
+border-right-width: 2px;
+margin:0px;
+text-align: left;
 
-	}
+}
 
 nav ul ul {
-	display: none;
+display: none;
 }
 
-	nav ul li:hover > ul {
-		display: block;
-	}
+nav ul li:hover > ul {
+display: block;
+}
 
-	nav ul {
-	background: gray;
-	background: linear-gradient(top, #707070 0%, #3B3B3B 100%);
-	background: -moz-linear-gradient(top, #707070 0%, #3B3B3B 100%);
-	background: -webkit-linear-gradient(top, #707070 0%,#3B3B3B 100%);
-	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-   margin: 0px;
-    width:100%;
-	list-style: none;
-	position: relative;
-	display: inline-table;
-	font-weight:bold;
-	font-size: 12px;
-	font-family:Open Sans;
-
-
-
+nav ul {
+background: gray;
+background: linear-gradient(top, #707070 0%, #3B3B3B 100%);
+background: -moz-linear-gradient(top, #707070 0%, #3B3B3B 100%);
+background: -webkit-linear-gradient(top, #707070 0%,#3B3B3B 100%);
+box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+margin: 0px;
+width:100%;
+list-style: none;
+position: relative;
+display: inline-table;
+font-weight:bold;
+font-size: 12px;
+font-family:Open Sans;
 
 }
-	nav ul:after {
-		content: ""; clear: both; display: block;
-		 text-align: left;
-	}
-
-	nav ul li {
-	float: left;
+nav ul:after {
+content: ""; clear: both; display: block;
+text-align: left;
 }
-	nav ul li:hover {
-		background: red;
-		background: linear-gradient(top, #707070 0%, #3B3B3B 40%);
-		background: -moz-linear-gradient(top, #707070 0%, #3B3B3B 40%);
-		background: -webkit-linear-gradient(top, #707070 0%,#3B3B3B 40%);
 
-
-	}
-		nav ul li:hover a {
-			color: white;
-		}
-
-	nav ul li a {
-		display: block; padding:20px; padding-right: 60px; padding-top: 20px; padding-bottom:30px;
-		color: white; text-decoration: none;
-		min-width: 10px;
-		text-align: left;
-    font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
-
-	}
-	nav ul li ul {
-		width: 159px;
-	}
-	nav ul ul {
-	background: /* #3B3B3B */; border-radius: 0px; padding: 0;
-	position: absolute; top: 100%;
+nav ul li {
+float: left;
 }
-	nav ul ul li {
-		float: none;
-		border-top: 1px solid #6b727c;
-		border-bottom: 1px solid #575f6a;
-		position: relative;
-	}
-		nav ul ul li a {
-			padding: 10px; padding-top: 20px; padding-bottom: 20px;
-			color: #fff;
-			text-align: left;
+nav ul li:hover {
+background: red;
+background: linear-gradient(top, #707070 0%, #3B3B3B 40%);
+background: -moz-linear-gradient(top, #707070 0%, #3B3B3B 40%);
+background: -webkit-linear-gradient(top, #707070 0%,#3B3B3B 40%);
 
-		}
-			nav ul ul li a:hover {
-				background: #446f5a;
-			}
+}
+nav ul li:hover a {
+color: white;
+}
 
-			nav ul ul ul {
-	position: absolute; left: 100%; top:0;
+nav ul li a {
+display: block; padding:20px; padding-right: 60px; padding-top: 20px; padding-bottom:30px;
+color: white; text-decoration: none;
+min-width: 10px;
+text-align: left;
+font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
+
+}
+nav ul li ul {
+width: 159px;
+}
+nav ul ul {
+background: /* #3B3B3B */; border-radius: 0px; padding: 0;
+position: absolute; top: 100%;
+}
+nav ul ul li {
+float: none;
+border-top: 1px solid #6b727c;
+border-bottom: 1px solid #575f6a;
+position: relative;
+}
+nav ul ul li a {
+padding: 10px; padding-top: 20px; padding-bottom: 20px;
+color: #fff;
+text-align: left;
+
+}
+nav ul ul li a:hover {
+background: #446f5a;
+}
+
+nav ul ul ul {
+position: absolute; left: 100%; top:0;
 }
 .active {
-	background-color: #446f5a;
-	 padding:20px; padding-right: 70px; padding-top: 20px; padding-bottom:30px;
-
+background-color: #446f5a;
+padding:20px; padding-right: 70px; padding-top: 20px; padding-bottom:30px;
 
 }
 .globus { float:right;
@@ -131,160 +126,144 @@ margin-right: 4px;}
 
 .Background{
 
+margin-top: 2px;
+margin-left: 100px;
+margin-right: 100px;
+background-color: white;
 
-	margin-top: 2px;
-	margin-left: 100px;
-		margin-right: 100px;
-	background-color: white;
-
-
-
-	border-style: groove;
-	border-color: rgb(130,185,160);
-	border-left-width: 2px;
-	border-right-width: 2px;
-	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
-	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+border-style: groove;
+border-color: rgb(130,185,160);
+border-left-width: 2px;
+border-right-width: 2px;
+-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
 }
 
 .Text {
 
-	text-align: justify;
-	color: black;
-	margin-bottom: 50px;
-	font-size: 13px;
-	padding-top: 30px;
-	line-height: 1.8;
-	word-spacing: 2px;
-	padding-right: 40px;
-	padding-left: 40px;
+text-align: justify;
+color: black;
+margin-bottom: 50px;
+font-size: 13px;
+padding-top: 30px;
+line-height: 1.8;
+word-spacing: 2px;
+padding-right: 40px;
+padding-left: 40px;
 
-	font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
-
+font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
 
 }
 h1 {
-	text-align: justify;
-	padding-bottom: 13px;
-	font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
+text-align: justify;
+padding-bottom: 13px;
+font-family: Verdana, 'Lucida Sans Unicode', sans-serif;
 }
 
 h2 {
-	font-size: 16px;
-	color: #333;
+font-size: 16px;
+color: #333;
 }
 
 /* ---------------Images------------------ */
 
 .Images {
-	margin-bottom: 50px;
-	margin-top: 30px;
-    width: 330px;
+margin-bottom: 50px;
+margin-top: 30px;
+width: 330px;
 
-	float:left;
-	bottom:0px;
-	margin-right: 55px;
-
+float:left;
+bottom:0px;
+margin-right: 55px;
 
 }
 .Images spanA{
-	background-color: rgb(180,160,150);
-	background-color: rgba(180,160,150,0.8);
+background-color: rgb(180,160,150);
+background-color: rgba(180,160,150,0.8);
 
-
-    bottom: 0;
-    width: 100%;
-    line-height: 5em;
-    text-align: center;
-	text-decoration:none;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	font-family: Open Sans;
+bottom: 0;
+width: 100%;
+line-height: 5em;
+text-align: center;
+text-decoration:none;
+color: white;
+font-size: 20px;
+font-weight: bold;
+font-family: Open Sans;
 }
 .Images spanB{
-	background-color: rgb(215,180,105);
-	background-color: rgba(215,180,105,0.8);
+background-color: rgb(215,180,105);
+background-color: rgba(215,180,105,0.8);
 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 5em;
-    text-align: center;
-	text-decoration:none;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	font-family: Open Sans;
+position: absolute;
+bottom: 0;
+width: 100%;
+line-height: 5em;
+text-align: center;
+text-decoration:none;
+color: white;
+font-size: 20px;
+font-weight: bold;
+font-family: Open Sans;
 }
 .Images spanC{
-	background-color: rgb(125,165,75);
-	background-color: rgba(125,165,75,0.8);
+background-color: rgb(125,165,75);
+background-color: rgba(125,165,75,0.8);
 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 5em;
-    text-align: center;
-	text-decoration:none;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	font-family: Open Sans;
+position: absolute;
+bottom: 0;
+width: 100%;
+line-height: 5em;
+text-align: center;
+text-decoration:none;
+color: white;
+font-size: 20px;
+font-weight: bold;
+font-family: Open Sans;
 }
 .Images Minigrad{
-	background-color: rgb(255,255,115);
-	background-color: rgba(255,255,115,0.8);
+background-color: rgb(255,255,115);
+background-color: rgba(255,255,115,0.8);
 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 5em;
-    text-align: center;
-	text-decoration:none;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	font-family: Open Sans;
+position: absolute;
+bottom: 0;
+width: 100%;
+line-height: 5em;
+text-align: center;
+text-decoration:none;
+color: white;
+font-size: 20px;
+font-weight: bold;
+font-family: Open Sans;
 }
 
 .Images img{
-	display: block;
+display: block;
 }
-
-
-
-
 
 .timeline {
 
-	border-style: groove;
-	border-color: rgb(130,185,160);
-	border-left-width: 2px;
-	border-right-width: 2px;
-	background-color: white;
-	border-bottom: 5px;
-	margin-bottom:5px;
+border-style: groove;
+border-color: rgb(130,185,160);
+border-left-width: 2px;
+border-right-width: 2px;
+background-color: white;
+border-bottom: 5px;
+margin-bottom:5px;
 
-	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
-	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
 }
-
-
-
-
-
 
 /* ---------------Impressum------------------ */
 .Impressum {
 
 }
 
-
 .rk {
-	text-align: right;
-	padding-top: 20px;
-	margin:0px;
+text-align: right;
+padding-top: 20px;
+margin:0px;
 }
