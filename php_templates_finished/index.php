@@ -79,23 +79,24 @@ init_get ('language',		DEFAULT_LANGUAGE);
 
 
 		<!--------------Impressum---------------->
-		<div class="Impressum">
+					<div class="Impressum">
 
-				<div style="float: left; color: black; font-family: Open Sans; padding-top: 80px;">
-						University of Tübingen<br>
-						SFB 1070 ResourceCultures<br>
-						Gartenstraße 29 &middot; D-72074 Tübingen<br> <br>
-						Phone +49 7071 29-73596<br>
-						www.sfb1070.uni-tuebingen.de
+			<div style="font-size: 12px; float: right; color: black; font-family: Open Sans; padding-top: 195px;">
+					University of Tübingen&nbsp;&middot;
+					SFB 1070 ResourceCultures&nbsp;&middot;
+					Gartenstraße 29 &nbsp;&middot; D-72074 Tübingen&nbsp;&middot;
+					Phone +49 7071 29-73596&nbsp;&middot;
+					www.sfb1070.uni-tuebingen.de
 
-						</div>
-									<img style="float: right;" src="main/images/SFB1070-Logo.png" width="300px" height="300px">
-
-
+					</div>
+								<img style="float: left;" src="main/images/SFB1070-Logo.png" width="300px" height="300px">
 
 
 
-						</div>
+
+
+					</div>
+
 
 					</div>
 
