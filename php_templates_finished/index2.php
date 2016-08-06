@@ -1,6 +1,6 @@
 <?php
 require_once ('main/config.php');				# Config-file
-require_once ('main/php/functions.php'); # PHP-functions
+require_once ('main/php/functions.php');                        # PHP-functions
 
 init_get ('site',			'');
 init_get ('project',		'');
@@ -9,6 +9,8 @@ init_get ('language',		DEFAULT_LANGUAGE);
 
 <!DOCTYPE html>
 <html lang="de">
+	
+	<!------------Head---------------------->
 	<head>
 		<title><?php echo 'Ressourcen Kulturen:'.$_GET['site'] ?></title>
 
@@ -20,7 +22,7 @@ init_get ('language',		DEFAULT_LANGUAGE);
 	<!------------Body---------------------->
 	<body>
 
-		<!------------banner---------------------->
+		<!------------Banner---------------------->
 		<div class="banner">
 			<!--Deutsch/Englisch-->
 			<div id="flag"  align="right" >
@@ -29,7 +31,8 @@ init_get ('language',		DEFAULT_LANGUAGE);
 			<img src="main/images/Logo-uni-tuebingen.png" >
 
 		</div>
-
+		
+                <!------------Navibar---------------------->
 		<?php require_once('main/templates/tpl_navibar.php'); ?>
 
 		<!---------Background------------------>
@@ -76,8 +79,8 @@ init_get ('language',		DEFAULT_LANGUAGE);
 						</div>
 						<img id="main-img" src="main/images/A01.jpg" />
 					</div>
+					
 					<!--------------Image slider-------------------->
-
 					<script type="text/javascript">
 						function showImg(s) {
 							document.getElementById("main-img").src = s.src;
