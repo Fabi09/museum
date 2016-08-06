@@ -60,15 +60,32 @@ foreach (RETURN_CSVFILE_CONTENT (realpath($directory.'/inhalt.csv')) as $key_ind
 	<br>
 EOT;
 	}
+}
+	?>
+	<div id="slider" style="text-align: center;">
+	 		<div id="imageContainer">
+				<ul id="imageBox">
+	<?php
+	
+	$directory = realpath('main/data/'.$_GET['projekt'].'/');
+foreach (RETURN_CSVFILE_CONTENT (realpath($directory.'/inhalt.csv')) as $key_index => $array){
 	if (file_exists ($directory.'/bilder/'.$array['bild'])){
-		echo '<img style="max-width: 100; max-height: 100px" src="../data/' . $_GET['projekt'] . '/bilder/' . $array['bild'] . '" alt=""/>';
-		echo '&nbsp;&nbsp;&nbsp;';
-	}
-	else {
-		echo '&nbsp;&nbsp;&nbsp;';
+		echo '<li><img src="main/data/'.$_GET['projekt'].'/bilder/'.$array['bild'].'" onclick="showImg(this)" /></li>';
+ 
 	}
 }
 ?>
+</ul>
+			</div>
+			<img id="main-img" src="main/images/A01.jpg" />
+		</div>
+<!--------------Image slider-------------------->
+			 
+		<script type="text/javascript">
+			function showImg(s){
+				document.getElementById("main-img").src = s.src;
+			}
+		</script>
  	</div>
 		 	</div>
 
