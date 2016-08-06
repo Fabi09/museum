@@ -14,6 +14,7 @@ init_get ('language',		DEFAULT_LANGUAGE);
 
 	    	<meta charset="UTF-8"/>
 	    	<link href="main/stylesheets/styleSubPage.css" rel="stylesheet" type="text/css">
+	        <link href="main/stylesheets/sliderStyle.css" rel="stylesheet" type="text/css">
 	  	</head>
 
 
