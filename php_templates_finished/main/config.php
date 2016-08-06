@@ -4,13 +4,9 @@
 define ('DEFAULT_CONTENT',  'Startseite');
 define ('DEFAULT_LANGUAGE', 'DE');
 
-
 # language
 define ('LANGUAGE_DE', 'DE');
 define ('LANGUAGE_EN', 'EN');
-
-
-
 
 # Images
 define ('IMG_GLOBE',			'main/images/globe-green.png');
