@@ -23,12 +23,12 @@ init_get ('language',		DEFAULT_LANGUAGE);
 
 			<!------------banner---------------------->
 				<div class="banner">
-					<img src="main/images/Logo-uni-tuebingen.png" >
-					<!--Deutsch/Englisch-->
-					<div id="flag"  align="right" >
-						<?php ECHO_FLAGS (); ?>
-					</div>
-				</div>
+				<!--Deutsch/Englisch-->
+				<div id="flag"  align="right" >
+					<?php ECHO_FLAGS (); ?></div>
+				<img src="main/images/Logo-uni-tuebingen.png" >
+
+			</div>
 
 
 		    <?php
