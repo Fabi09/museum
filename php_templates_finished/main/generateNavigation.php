@@ -155,9 +155,8 @@ define ('PROJECT_M_EN', 'Special Research Unit');", FILE_APPEND | LOCK_EX);
 	}
 
 } else {
-	echo "Sie haben entweder keine Schreibrechte auf Dateien im <b>".DIR_CSV;
-	echo "</b>.\n<br />Oder die Datei <br />* <b>";
-	echo $php_config."</b> bzw. <br />* <b>".$php_nav."</b><br />liegt nicht im Ordner ".DIR_CSV."!";
+	echo "Sie haben entweder keine Schreibrechte auf Dateien <br />* <b>".$php_config."</b> bzw. <br />* <b>".$php_nav."</b>";
+	echo "<br />oder die Dateien existieren nicht.";
 }
 
 ?>
