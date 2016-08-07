@@ -1,7 +1,22 @@
 <div class="Text">
+<?php
 
-<h1> <?php echo  constant('SITE_'.strtoupper($_GET['site']).'_'.$_GET['language']);?> </h1><br />
-<a>
-hahahksklsclncancklancnascklnasc
+echo <<<EOT
+<h1>Publikationen</h1>
+EOT;
 
-</a>
+$directory = realpath('main/data/'.$_GET['site'].'/');
+foreach (RETURN_CSVFILE_CONTENT (realpath($directory.'/inhalt_'.($_GET['language']).'.csv')) as $key_index => $array){
+if(!empty($array['zusammenfassung'])){
+echo '<tr>';
+				echo '<td align="left" style="width: 1%" valign="top">';
+						echo '- ';
+						echo $array['zusammenfassung'];
+						echo '<br>';
+						echo '<br>';
+				echo '</td>';
+echo '</tr>';
+}
+}
+?>
+</div>
