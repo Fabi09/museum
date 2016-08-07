@@ -111,7 +111,7 @@ define ('LBL_LANGUAGE_EN', 'English');\n\n", FILE_APPEND | LOCK_EX);
 		   file_put_contents($php_config, "define('SITE_".$site."_EN','".$nav[$i][1]."');\n", FILE_APPEND | LOCK_EX);
 		   
 		   # if template not exists copy from default
-		   if ( !file_exists('tpl_'.strtolower($site).'.php')){
+		   if ( !file_exists('templates/tpl_'.strtolower($site).'.php')){
 		   	@copy('templates/tpl_default.php', 'templates/tpl_'.strtolower($site).".php");
 		   }
 		   
