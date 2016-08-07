@@ -139,9 +139,11 @@ function RETURN_CSV_FILE ($path, $file){
 		$row = 0;
 		$i = 0;
 
+		# get delimeter
+		$delimeter = getFileDelimiter($f);
 
 		if (($handle = fopen($f, "r")) !== FALSE) {
-			while (($data = fgetcsv($handle, 100, ";")) !== FALSE) {
+			while (($data = fgetcsv($handle, 100, $delimeter)) !== FALSE) {
 				if ($row > 0){
 					#print_r($data);
 					$csv[$i] = $data;
@@ -160,6 +162,36 @@ function RETURN_CSV_FILE ($path, $file){
 	}
 
 	return $csv;
+}
+
+
+function getFileDelimiter($file, $checkLines = 2){
+	# Function to find out csv file delimeter
+	$file = new SplFileObject($file);
+	$delimiters = array(',',';','|',':', '~');
+	
+	$results = array();
+	$i = 0;
+	
+	while($file->valid() && $i <= $checkLines){
+		$line = $file->fgets();
+		foreach ($delimiters as $delimiter){
+			$regExp = '/['.$delimiter.']/';
+			$fields = preg_split($regExp, $line);
+			
+			if(count($fields) > 1){
+				if(!empty($results[$delimiter])){
+					$results[$delimiter]++;
+				} else {
+					$results[$delimiter] = 1;
+				}
+			}
+		}
+		$i++;
+	}
+	
+	$results = array_keys($results, max($results));
+	return $results[0];
 }
 
  ?>
