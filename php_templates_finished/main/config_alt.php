@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 # Default values for $_GET-vars
 define ('DEFAULT_CONTENT',  'Startseite');
 define ('DEFAULT_LANGUAGE', 'DE');
@@ -19,28 +20,13 @@ define ('TITLE_EN', 'SFB 1070 ResourceCultures');
 # Language
 define ('LBL_LANGUAGE_DE', 'Deutsch');
 define ('LBL_LANGUAGE_EN', 'English');
-define('SITE_HOME_DE','Home');
-define('SITE_HOME_EN','Home');
 
-define('SITE_PROJECTS_DE','Teilprojekte');
-define('SITE_PROJECTS_EN','Projects');
+define ('SITE_HOME_DE', 'Home');
+define ('SITE_HOME_EN', 'Home');
 
-define('SITE_HISTORY_DE','Geschichte');
-define('SITE_HISTORY_EN','History');
+define ('SITE_PROJECTS_DE', 'Teilprojekte');
+define ('SITE_PROJECTS_EN', 'Projects');
 
-define('SITE_PUBLICATIONS_DE','Publikationen');
-define('SITE_PUBLICATIONS_EN','Publications');
-
-define('SITE_BLUBLU_DE','Bla Bla');
-define('SITE_BLUBLU_EN','Blu Blu');
-
-define('SITE_DATE_DE','Termine');
-define('SITE_DATE_EN','Date');
-
-define('SITE_MAP_DE','Karte');
-define('SITE_MAP_EN','Map');
-
-# Projects
 define ('SITE_PROJECT_A_DE', 'Entwicklungen');
 define ('SITE_PROJECT_A_EN', 'Developments');
 
@@ -53,6 +39,19 @@ define ('SITE_PROJECT_C_EN', 'Valuations');
 define ('SITE_PROJECT_M_DE', 'Minigraduiertenkolleg');
 define ('SITE_PROJECT_M_EN', 'Special Research Unit');
 
+define ('SITE_HISTORY_DE', 'Geschichte');
+define ('SITE_HISTORY_EN', 'History');
+
+define ('SITE_PUBLICATIONS_DE', 'Publikationen');
+define ('SITE_PUBLICATIONS_EN', 'Publications');
+
+define ('SITE_DATE_DE', 'Termine');
+define ('SITE_DATE_EN', 'Date');
+
+define ('SITE_GLOBE_DE', 'Karte');
+define ('SITE_GLOBE_EN', 'Map');
+
+# Projects
 define ('PROJECT_A_DE', 'A: Entwicklungen');
 define ('PROJECT_A_EN', 'A: Developments');
 
@@ -64,4 +63,5 @@ define ('PROJECT_C_EN', 'C: Valuations');
 
 define ('PROJECT_M_DE', 'Mini-Graduiertenkolleg');
 define ('PROJECT_M_EN', 'Special Research Unit');
+
 ?>
