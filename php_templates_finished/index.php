@@ -65,7 +65,11 @@ init_get ('language',		DEFAULT_LANGUAGE);
 		<div class="Background">
 
 			<?php
-			if (!empty ($_GET['site'])){
+			# erste Fall ohne GET-Variablen
+			if (empty ($_GET['site'])){
+				require_once ('main/templates/tpl_home.php');
+			}
+			else if (!empty ($_GET['site'])){
 			require_once ('main/templates/tpl_'.strtolower($_GET['site']).'.php');
 			}
 
